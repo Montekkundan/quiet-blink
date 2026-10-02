@@ -1,0 +1,4091 @@
+{
+ "meta": {
+  "calibration_subjects": [
+   1,
+   2,
+   3,
+   7,
+   10,
+   13,
+   14,
+   15,
+   16,
+   19
+  ],
+  "test_subjects": [
+   4,
+   5,
+   6,
+   8,
+   9,
+   11,
+   12,
+   17,
+   18,
+   20
+  ],
+  "sim_calibration_seeds": [
+   0,
+   1,
+   2,
+   3,
+   4,
+   5,
+   6,
+   7,
+   8,
+   9
+  ],
+  "sim_test_seeds": [
+   100,
+   101,
+   102,
+   103,
+   104,
+   105,
+   106,
+   107,
+   108,
+   109
+  ],
+  "sim_config": {
+   "duration_s": 480.0,
+   "fs": 512,
+   "commands_per_min": 3.0,
+   "blinks_per_min": 16.0,
+   "natural_double_fraction": 0.08,
+   "jaw_per_min": 0.5,
+   "movement_per_min": 1.0,
+   "dropouts_per_min": 0.2,
+   "noise_scale": 1.0,
+   "deliberate_gain": 1.5
+  },
+  "scales": [
+   0.5,
+   0.6,
+   0.7,
+   0.8,
+   0.9,
+   1.0,
+   1.1,
+   1.2,
+   1.35,
+   1.5,
+   1.7,
+   2.0
+  ],
+  "budgets_percent": [
+   30.0,
+   20.0
+  ],
+  "channels": [
+   "Fp1.",
+   "Fpz.",
+   "Fp2."
+  ],
+  "gates_in_grid": 75,
+  "total_wall_s": 148.386271115,
+  "total_cpu_s": 44.164195483,
+  "stages": {
+   "simulator_sweeps": {
+    "wall_s": 15.180655044000105,
+    "cpu_s": 5.074407236
+   },
+   "real_background_sweeps": {
+    "wall_s": 90.98808393899981,
+    "cpu_s": 25.904641386
+   },
+   "selection_and_bootstrap": {
+    "wall_s": 2.753827714000181,
+    "cpu_s": 0.8703442509999988
+   },
+   "nuisance_sweep": {
+    "wall_s": 34.549845917999846,
+    "cpu_s": 10.720630808000003
+   },
+   "refire_diagnostics": {
+    "wall_s": 4.913831480000226,
+    "cpu_s": 1.5941474489999976
+   }
+  }
+ },
+ "simulator": {
+  "operating_points": {
+   "30.0": {
+    "firmware": {
+     "scale": 0.8,
+     "gate": {
+      "cooldown_ms": 0,
+      "min_ms": 0.0,
+      "max_ms": null,
+      "peak_cap": null,
+      "ibi_ratio": null
+     },
+     "feasible_on_calibration": true,
+     "calibration": {
+      "false_per_hour": 78.75,
+      "false_per_hour_ci95": [
+       62.98125,
+       96.75
+      ],
+      "false_events": 105,
+      "negative_minutes": 80.0,
+      "stream_minutes": 80.0,
+      "missed_percent": 22.127659574468083,
+      "missed_percent_ci95": [
+       15.948275862068966,
+       27.96738018702512
+      ],
+      "commands": 235,
+      "missed_percent_by_kind": {
+       "double": 16.793893129770993,
+       "triple": 28.846153846153843
+      },
+      "false_per_hour_by_group": {
+       "0": 60.0,
+       "1": 75.0,
+       "2": 45.0,
+       "3": 90.0,
+       "4": 142.5,
+       "5": 45.0,
+       "6": 67.5,
+       "7": 75.0,
+       "8": 112.5,
+       "9": 75.0
+      },
+      "mean_latency_ms": {
+       "double": 694.3119266055046,
+       "triple": 87.91891891891892
+      }
+     },
+     "test": {
+      "false_per_hour": 79.5,
+      "false_per_hour_ci95": [
+       60.75,
+       99.0
+      ],
+      "false_events": 106,
+      "negative_minutes": 80.0,
+      "stream_minutes": 80.0,
+      "missed_percent": 28.346456692913385,
+      "missed_percent_ci95": [
+       22.131147540983605,
+       36.69417842741935
+      ],
+      "commands": 254,
+      "missed_percent_by_kind": {
+       "double": 25.581395348837212,
+       "triple": 31.2
+      },
+      "false_per_hour_by_group": {
+       "100": 45.0,
+       "101": 67.5,
+       "102": 90.0,
+       "103": 135.0,
+       "104": 105.0,
+       "105": 75.0,
+       "106": 112.5,
+       "107": 67.5,
+       "108": 75.0,
+       "109": 22.5
+      },
+      "mean_latency_ms": {
+       "double": 694.9583333333334,
+       "triple": 95.70930232558139
+      }
+     },
+     "false_reduction_vs_firmware_test": {
+      "value": 0.0,
+      "ci95": [
+       0.0,
+       0.0
+      ]
+     }
+    },
+    "cooldown": {
+     "scale": 0.8,
+     "gate": {
+      "cooldown_ms": 3000,
+      "min_ms": 0.0,
+      "max_ms": null,
+      "peak_cap": null,
+      "ibi_ratio": null
+     },
+     "feasible_on_calibration": true,
+     "calibration": {
+      "false_per_hour": 66.0,
+      "false_per_hour_ci95": [
+       54.0,
+       78.75
+      ],
+      "false_events": 88,
+      "negative_minutes": 80.0,
+      "stream_minutes": 80.0,
+      "missed_percent": 26.382978723404253,
+      "missed_percent_ci95": [
+       21.303654024051806,
+       31.004366812227076
+      ],
+      "commands": 235,
+      "missed_percent_by_kind": {
+       "double": 22.137404580152673,
+       "triple": 31.73076923076923
+      },
+      "false_per_hour_by_group": {
+       "0": 60.0,
+       "1": 52.5,
+       "2": 45.0,
+       "3": 60.0,
+       "4": 112.5,
+       "5": 45.0,
+       "6": 52.5,
+       "7": 67.5,
+       "8": 97.5,
+       "9": 67.5
+      },
+      "mean_latency_ms": {
+       "double": 694.0098039215686,
+       "triple": 88.07042253521126
+      }
+     },
+     "test": {
+      "false_per_hour": 68.25,
+      "false_per_hour_ci95": [
+       51.73125,
+       87.75
+      ],
+      "false_events": 91,
+      "negative_minutes": 80.0,
+      "stream_minutes": 80.0,
+      "missed_percent": 29.92125984251969,
+      "missed_percent_ci95": [
+       22.565736979544464,
+       39.69493713515941
+      ],
+      "commands": 254,
+      "missed_percent_by_kind": {
+       "double": 27.906976744186046,
+       "triple": 32.0
+      },
+      "false_per_hour_by_group": {
+       "100": 37.5,
+       "101": 52.5,
+       "102": 75.0,
+       "103": 135.0,
+       "104": 90.0,
+       "105": 52.5,
+       "106": 82.5,
+       "107": 67.5,
+       "108": 67.5,
+       "109": 22.5
+      },
+      "mean_latency_ms": {
+       "double": 694.3870967741935,
+       "triple": 95.7764705882353
+      }
+     },
+     "false_reduction_vs_firmware_test": {
+      "value": 0.14150943396226412,
+      "ci95": [
+       0.06860667996011963,
+       0.21009509066784607
+      ]
+     }
+    },
+    "gate": {
+     "scale": 0.7,
+     "gate": {
+      "cooldown_ms": 0,
+      "min_ms": 80.0,
+      "max_ms": 500.0,
+      "peak_cap": 3.0,
+      "ibi_ratio": null
+     },
+     "feasible_on_calibration": true,
+     "calibration": {
+      "false_per_hour": 32.25,
+      "false_per_hour_ci95": [
+       24.75,
+       42.0
+      ],
+      "false_events": 43,
+      "negative_minutes": 80.0,
+      "stream_minutes": 80.0,
+      "missed_percent": 27.23404255319149,
+      "missed_percent_ci95": [
+       22.82121278299483,
+       31.855881535038925
+      ],
+      "commands": 235,
+      "missed_percent_by_kind": {
+       "double": 23.66412213740458,
+       "triple": 31.73076923076923
+      },
+      "false_per_hour_by_group": {
+       "0": 30.0,
+       "1": 22.5,
+       "2": 22.5,
+       "3": 30.0,
+       "4": 45.0,
+       "5": 22.5,
+       "6": 22.5,
+       "7": 37.5,
+       "8": 67.5,
+       "9": 22.5
+      },
+      "mean_latency_ms": {
+       "double": 829.61,
+       "triple": 225.22535211267606
+      }
+     },
+     "test": {
+      "false_per_hour": 36.0,
+      "false_per_hour_ci95": [
+       27.75,
+       44.25
+      ],
+      "false_events": 48,
+      "negative_minutes": 80.0,
+      "stream_minutes": 80.0,
+      "missed_percent": 32.28346456692913,
+      "missed_percent_ci95": [
+       29.527377458813955,
+       35.65588837994214
+      ],
+      "commands": 254,
+      "missed_percent_by_kind": {
+       "double": 28.68217054263566,
+       "triple": 36.0
+      },
+      "false_per_hour_by_group": {
+       "100": 30.0,
+       "101": 22.5,
+       "102": 52.5,
+       "103": 37.5,
+       "104": 22.5,
+       "105": 45.0,
+       "106": 60.0,
+       "107": 15.0,
+       "108": 37.5,
+       "109": 37.5
+      },
+      "mean_latency_ms": {
+       "double": 831.9673913043479,
+       "triple": 227.05
+      }
+     },
+     "false_reduction_vs_firmware_test": {
+      "value": 0.5471698113207547,
+      "ci95": [
+       0.40421387123514785,
+       0.661656899601946
+      ]
+     }
+    },
+    "both": {
+     "scale": 0.7,
+     "gate": {
+      "cooldown_ms": 3000,
+      "min_ms": 80.0,
+      "max_ms": 500.0,
+      "peak_cap": 3.0,
+      "ibi_ratio": null
+     },
+     "feasible_on_calibration": true,
+     "calibration": {
+      "false_per_hour": 28.5,
+      "false_per_hour_ci95": [
+       22.5,
+       35.25
+      ],
+      "false_events": 38,
+      "negative_minutes": 80.0,
+      "stream_minutes": 80.0,
+      "missed_percent": 28.085106382978726,
+      "missed_percent_ci95": [
+       24.017467248908297,
+       32.083333333333336
+      ],
+      "commands": 235,
+      "missed_percent_by_kind": {
+       "double": 25.190839694656486,
+       "triple": 31.73076923076923
+      },
+      "false_per_hour_by_group": {
+       "0": 22.5,
+       "1": 15.0,
+       "2": 22.5,
+       "3": 30.0,
+       "4": 37.5,
+       "5": 22.5,
+       "6": 22.5,
+       "7": 37.5,
+       "8": 52.5,
+       "9": 22.5
+      },
+      "mean_latency_ms": {
+       "double": 829.8469387755102,
+       "triple": 225.22535211267606
+      }
+     },
+     "test": {
+      "false_per_hour": 32.25,
+      "false_per_hour_ci95": [
+       26.981250000000003,
+       37.5
+      ],
+      "false_events": 43,
+      "negative_minutes": 80.0,
+      "stream_minutes": 80.0,
+      "missed_percent": 32.28346456692913,
+      "missed_percent_ci95": [
+       29.527377458813955,
+       35.65588837994214
+      ],
+      "commands": 254,
+      "missed_percent_by_kind": {
+       "double": 28.68217054263566,
+       "triple": 36.0
+      },
+      "false_per_hour_by_group": {
+       "100": 30.0,
+       "101": 22.5,
+       "102": 37.5,
+       "103": 37.5,
+       "104": 22.5,
+       "105": 37.5,
+       "106": 45.0,
+       "107": 15.0,
+       "108": 37.5,
+       "109": 37.5
+      },
+      "mean_latency_ms": {
+       "double": 831.9673913043479,
+       "triple": 227.05
+      }
+     },
+     "false_reduction_vs_firmware_test": {
+      "value": 0.5943396226415094,
+      "ci95": [
+       0.4578217123814407,
+       0.6854896313364055
+      ]
+     }
+    }
+   },
+   "20.0": {
+    "firmware": {
+     "scale": 0.8,
+     "gate": {
+      "cooldown_ms": 0,
+      "min_ms": 0.0,
+      "max_ms": null,
+      "peak_cap": null,
+      "ibi_ratio": null
+     },
+     "feasible_on_calibration": false,
+     "calibration": {
+      "false_per_hour": 78.75,
+      "false_per_hour_ci95": [
+       62.98125,
+       96.75
+      ],
+      "false_events": 105,
+      "negative_minutes": 80.0,
+      "stream_minutes": 80.0,
+      "missed_percent": 22.127659574468083,
+      "missed_percent_ci95": [
+       15.948275862068966,
+       27.96738018702512
+      ],
+      "commands": 235,
+      "missed_percent_by_kind": {
+       "double": 16.793893129770993,
+       "triple": 28.846153846153843
+      },
+      "false_per_hour_by_group": {
+       "0": 60.0,
+       "1": 75.0,
+       "2": 45.0,
+       "3": 90.0,
+       "4": 142.5,
+       "5": 45.0,
+       "6": 67.5,
+       "7": 75.0,
+       "8": 112.5,
+       "9": 75.0
+      },
+      "mean_latency_ms": {
+       "double": 694.3119266055046,
+       "triple": 87.91891891891892
+      }
+     },
+     "test": {
+      "false_per_hour": 79.5,
+      "false_per_hour_ci95": [
+       60.75,
+       99.0
+      ],
+      "false_events": 106,
+      "negative_minutes": 80.0,
+      "stream_minutes": 80.0,
+      "missed_percent": 28.346456692913385,
+      "missed_percent_ci95": [
+       22.131147540983605,
+       36.69417842741935
+      ],
+      "commands": 254,
+      "missed_percent_by_kind": {
+       "double": 25.581395348837212,
+       "triple": 31.2
+      },
+      "false_per_hour_by_group": {
+       "100": 45.0,
+       "101": 67.5,
+       "102": 90.0,
+       "103": 135.0,
+       "104": 105.0,
+       "105": 75.0,
+       "106": 112.5,
+       "107": 67.5,
+       "108": 75.0,
+       "109": 22.5
+      },
+      "mean_latency_ms": {
+       "double": 694.9583333333334,
+       "triple": 95.70930232558139
+      }
+     },
+     "false_reduction_vs_firmware_test": {
+      "value": 0.0,
+      "ci95": [
+       0.0,
+       0.0
+      ]
+     }
+    },
+    "cooldown": {
+     "scale": 0.8,
+     "gate": {
+      "cooldown_ms": 1000,
+      "min_ms": 0.0,
+      "max_ms": null,
+      "peak_cap": null,
+      "ibi_ratio": null
+     },
+     "feasible_on_calibration": false,
+     "calibration": {
+      "false_per_hour": 73.5,
+      "false_per_hour_ci95": [
+       59.25,
+       90.0
+      ],
+      "false_events": 98,
+      "negative_minutes": 80.0,
+      "stream_minutes": 80.0,
+      "missed_percent": 22.97872340425532,
+      "missed_percent_ci95": [
+       17.841180814403263,
+       28.08676023600929
+      ],
+      "commands": 235,
+      "missed_percent_by_kind": {
+       "double": 17.557251908396946,
+       "triple": 29.807692307692307
+      },
+      "false_per_hour_by_group": {
+       "0": 60.0,
+       "1": 67.5,
+       "2": 45.0,
+       "3": 75.0,
+       "4": 135.0,
+       "5": 45.0,
+       "6": 60.0,
+       "7": 67.5,
+       "8": 105.0,
+       "9": 75.0
+      },
+      "mean_latency_ms": {
+       "double": 694.3703703703703,
+       "triple": 87.64383561643835
+      }
+     },
+     "test": {
+      "false_per_hour": 76.5,
+      "false_per_hour_ci95": [
+       58.5,
+       96.0
+      ],
+      "false_events": 102,
+      "negative_minutes": 80.0,
+      "stream_minutes": 80.0,
+      "missed_percent": 28.346456692913385,
+      "missed_percent_ci95": [
+       22.131147540983605,
+       36.69417842741935
+      ],
+      "commands": 254,
+      "missed_percent_by_kind": {
+       "double": 25.581395348837212,
+       "triple": 31.2
+      },
+      "false_per_hour_by_group": {
+       "100": 45.0,
+       "101": 60.0,
+       "102": 90.0,
+       "103": 135.0,
+       "104": 97.5,
+       "105": 67.5,
+       "106": 105.0,
+       "107": 67.5,
+       "108": 75.0,
+       "109": 22.5
+      },
+      "mean_latency_ms": {
+       "double": 694.9583333333334,
+       "triple": 95.70930232558139
+      }
+     },
+     "false_reduction_vs_firmware_test": {
+      "value": 0.037735849056603765,
+      "ci95": [
+       0.00990099009900991,
+       0.06505014816503302
+      ]
+     }
+    },
+    "gate": {
+     "scale": 0.6,
+     "gate": {
+      "cooldown_ms": 0,
+      "min_ms": 80.0,
+      "max_ms": 300.0,
+      "peak_cap": 3.0,
+      "ibi_ratio": 1.6
+     },
+     "feasible_on_calibration": true,
+     "calibration": {
+      "false_per_hour": 39.0,
+      "false_per_hour_ci95": [
+       27.75,
+       52.5187499999999
+      ],
+      "false_events": 52,
+      "negative_minutes": 80.0,
+      "stream_minutes": 80.0,
+      "missed_percent": 19.148936170212767,
+      "missed_percent_ci95": [
+       14.106250551778935,
+       24.89087654853159
+      ],
+      "commands": 235,
+      "missed_percent_by_kind": {
+       "double": 12.977099236641221,
+       "triple": 26.923076923076923
+      },
+      "false_per_hour_by_group": {
+       "0": 30.0,
+       "1": 52.5,
+       "2": 15.0,
+       "3": 30.0,
+       "4": 52.5,
+       "5": 22.5,
+       "6": 37.5,
+       "7": 30.0,
+       "8": 90.0,
+       "9": 30.0
+      },
+      "mean_latency_ms": {
+       "double": 840.0263157894736,
+       "triple": 237.19736842105263
+      }
+     },
+     "test": {
+      "false_per_hour": 37.5,
+      "false_per_hour_ci95": [
+       27.75,
+       46.5
+      ],
+      "false_events": 50,
+      "negative_minutes": 80.0,
+      "stream_minutes": 80.0,
+      "missed_percent": 24.409448818897637,
+      "missed_percent_ci95": [
+       19.40118182322588,
+       29.79630342703119
+      ],
+      "commands": 254,
+      "missed_percent_by_kind": {
+       "double": 13.178294573643413,
+       "triple": 36.0
+      },
+      "false_per_hour_by_group": {
+       "100": 30.0,
+       "101": 30.0,
+       "102": 60.0,
+       "103": 52.5,
+       "104": 7.5,
+       "105": 30.0,
+       "106": 37.5,
+       "107": 37.5,
+       "108": 52.5,
+       "109": 37.5
+      },
+      "mean_latency_ms": {
+       "double": 840.375,
+       "triple": 234.675
+      }
+     },
+     "false_reduction_vs_firmware_test": {
+      "value": 0.5283018867924528,
+      "ci95": [
+       0.35865683229813666,
+       0.6641293233082699
+      ]
+     }
+    },
+    "both": {
+     "scale": 0.6,
+     "gate": {
+      "cooldown_ms": 3000,
+      "min_ms": 80.0,
+      "max_ms": 300.0,
+      "peak_cap": 3.0,
+      "ibi_ratio": null
+     },
+     "feasible_on_calibration": true,
+     "calibration": {
+      "false_per_hour": 35.25,
+      "false_per_hour_ci95": [
+       26.25,
+       46.5
+      ],
+      "false_events": 47,
+      "negative_minutes": 80.0,
+      "stream_minutes": 80.0,
+      "missed_percent": 18.29787234042553,
+      "missed_percent_ci95": [
+       13.732881591366446,
+       23.17596566523605
+      ],
+      "commands": 235,
+      "missed_percent_by_kind": {
+       "double": 15.267175572519085,
+       "triple": 22.115384615384613
+      },
+      "false_per_hour_by_group": {
+       "0": 30.0,
+       "1": 45.0,
+       "2": 22.5,
+       "3": 30.0,
+       "4": 45.0,
+       "5": 15.0,
+       "6": 37.5,
+       "7": 22.5,
+       "8": 75.0,
+       "9": 30.0
+      },
+      "mean_latency_ms": {
+       "double": 840.1351351351351,
+       "triple": 240.6172839506173
+      }
+     },
+     "test": {
+      "false_per_hour": 31.5,
+      "false_per_hour_ci95": [
+       22.5,
+       39.75
+      ],
+      "false_events": 42,
+      "negative_minutes": 80.0,
+      "stream_minutes": 80.0,
+      "missed_percent": 20.47244094488189,
+      "missed_percent_ci95": [
+       14.754098360655737,
+       26.053707301278937
+      ],
+      "commands": 254,
+      "missed_percent_by_kind": {
+       "double": 13.953488372093023,
+       "triple": 27.200000000000003
+      },
+      "false_per_hour_by_group": {
+       "100": 7.5,
+       "101": 30.0,
+       "102": 45.0,
+       "103": 45.0,
+       "104": 7.5,
+       "105": 30.0,
+       "106": 30.0,
+       "107": 30.0,
+       "108": 52.5,
+       "109": 37.5
+      },
+      "mean_latency_ms": {
+       "double": 840.6666666666666,
+       "triple": 232.97802197802199
+      }
+     },
+     "false_reduction_vs_firmware_test": {
+      "value": 0.6037735849056604,
+      "ci95": [
+       0.4467828761855934,
+       0.7279465305539692
+      ]
+     }
+    }
+   }
+  },
+  "frontier": {
+   "firmware": [
+    {
+     "false_per_hour": 6.75,
+     "missed_percent": 99.21259842519686,
+     "scale": 1.7,
+     "gate": {
+      "cooldown_ms": 0,
+      "min_ms": 0.0,
+      "max_ms": null,
+      "peak_cap": null,
+      "ibi_ratio": null
+     }
+    },
+    {
+     "false_per_hour": 10.5,
+     "missed_percent": 97.63779527559055,
+     "scale": 1.5,
+     "gate": {
+      "cooldown_ms": 0,
+      "min_ms": 0.0,
+      "max_ms": null,
+      "peak_cap": null,
+      "ibi_ratio": null
+     }
+    },
+    {
+     "false_per_hour": 18.0,
+     "missed_percent": 94.88188976377953,
+     "scale": 1.35,
+     "gate": {
+      "cooldown_ms": 0,
+      "min_ms": 0.0,
+      "max_ms": null,
+      "peak_cap": null,
+      "ibi_ratio": null
+     }
+    },
+    {
+     "false_per_hour": 32.25,
+     "missed_percent": 84.25196850393701,
+     "scale": 1.2,
+     "gate": {
+      "cooldown_ms": 0,
+      "min_ms": 0.0,
+      "max_ms": null,
+      "peak_cap": null,
+      "ibi_ratio": null
+     }
+    },
+    {
+     "false_per_hour": 39.75,
+     "missed_percent": 74.80314960629921,
+     "scale": 1.1,
+     "gate": {
+      "cooldown_ms": 0,
+      "min_ms": 0.0,
+      "max_ms": null,
+      "peak_cap": null,
+      "ibi_ratio": null
+     }
+    },
+    {
+     "false_per_hour": 48.75,
+     "missed_percent": 59.84251968503938,
+     "scale": 1.0,
+     "gate": {
+      "cooldown_ms": 0,
+      "min_ms": 0.0,
+      "max_ms": null,
+      "peak_cap": null,
+      "ibi_ratio": null
+     }
+    },
+    {
+     "false_per_hour": 57.75,
+     "missed_percent": 41.338582677165356,
+     "scale": 0.9,
+     "gate": {
+      "cooldown_ms": 0,
+      "min_ms": 0.0,
+      "max_ms": null,
+      "peak_cap": null,
+      "ibi_ratio": null
+     }
+    },
+    {
+     "false_per_hour": 79.5,
+     "missed_percent": 28.346456692913385,
+     "scale": 0.8,
+     "gate": {
+      "cooldown_ms": 0,
+      "min_ms": 0.0,
+      "max_ms": null,
+      "peak_cap": null,
+      "ibi_ratio": null
+     }
+    }
+   ],
+   "cooldown": [
+    {
+     "false_per_hour": 6.75,
+     "missed_percent": 99.21259842519686,
+     "scale": 1.7,
+     "gate": {
+      "cooldown_ms": 1000,
+      "min_ms": 0.0,
+      "max_ms": null,
+      "peak_cap": null,
+      "ibi_ratio": null
+     }
+    },
+    {
+     "false_per_hour": 10.5,
+     "missed_percent": 97.63779527559055,
+     "scale": 1.5,
+     "gate": {
+      "cooldown_ms": 1000,
+      "min_ms": 0.0,
+      "max_ms": null,
+      "peak_cap": null,
+      "ibi_ratio": null
+     }
+    },
+    {
+     "false_per_hour": 18.0,
+     "missed_percent": 94.88188976377953,
+     "scale": 1.35,
+     "gate": {
+      "cooldown_ms": 1000,
+      "min_ms": 0.0,
+      "max_ms": null,
+      "peak_cap": null,
+      "ibi_ratio": null
+     }
+    },
+    {
+     "false_per_hour": 30.0,
+     "missed_percent": 84.25196850393701,
+     "scale": 1.2,
+     "gate": {
+      "cooldown_ms": 3000,
+      "min_ms": 0.0,
+      "max_ms": null,
+      "peak_cap": null,
+      "ibi_ratio": null
+     }
+    },
+    {
+     "false_per_hour": 37.5,
+     "missed_percent": 75.59055118110236,
+     "scale": 1.1,
+     "gate": {
+      "cooldown_ms": 3000,
+      "min_ms": 0.0,
+      "max_ms": null,
+      "peak_cap": null,
+      "ibi_ratio": null
+     }
+    },
+    {
+     "false_per_hour": 39.0,
+     "missed_percent": 74.80314960629921,
+     "scale": 1.1,
+     "gate": {
+      "cooldown_ms": 1000,
+      "min_ms": 0.0,
+      "max_ms": null,
+      "peak_cap": null,
+      "ibi_ratio": null
+     }
+    },
+    {
+     "false_per_hour": 44.25,
+     "missed_percent": 61.023622047244096,
+     "scale": 1.0,
+     "gate": {
+      "cooldown_ms": 3000,
+      "min_ms": 0.0,
+      "max_ms": null,
+      "peak_cap": null,
+      "ibi_ratio": null
+     }
+    },
+    {
+     "false_per_hour": 47.25,
+     "missed_percent": 59.84251968503938,
+     "scale": 1.0,
+     "gate": {
+      "cooldown_ms": 1000,
+      "min_ms": 0.0,
+      "max_ms": null,
+      "peak_cap": null,
+      "ibi_ratio": null
+     }
+    },
+    {
+     "false_per_hour": 51.75,
+     "missed_percent": 42.51968503937008,
+     "scale": 0.9,
+     "gate": {
+      "cooldown_ms": 3000,
+      "min_ms": 0.0,
+      "max_ms": null,
+      "peak_cap": null,
+      "ibi_ratio": null
+     }
+    },
+    {
+     "false_per_hour": 55.5,
+     "missed_percent": 41.338582677165356,
+     "scale": 0.9,
+     "gate": {
+      "cooldown_ms": 1000,
+      "min_ms": 0.0,
+      "max_ms": null,
+      "peak_cap": null,
+      "ibi_ratio": null
+     }
+    },
+    {
+     "false_per_hour": 68.25,
+     "missed_percent": 29.92125984251969,
+     "scale": 0.8,
+     "gate": {
+      "cooldown_ms": 3000,
+      "min_ms": 0.0,
+      "max_ms": null,
+      "peak_cap": null,
+      "ibi_ratio": null
+     }
+    },
+    {
+     "false_per_hour": 76.5,
+     "missed_percent": 28.346456692913385,
+     "scale": 0.8,
+     "gate": {
+      "cooldown_ms": 1000,
+      "min_ms": 0.0,
+      "max_ms": null,
+      "peak_cap": null,
+      "ibi_ratio": null
+     }
+    }
+   ],
+   "gate": [
+    {
+     "false_per_hour": 0.0,
+     "missed_percent": 100.0,
+     "scale": 1.5,
+     "gate": {
+      "cooldown_ms": 0,
+      "min_ms": 80.0,
+      "max_ms": 300.0,
+      "peak_cap": 1.2,
+      "ibi_ratio": null
+     }
+    },
+    {
+     "false_per_hour": 0.75,
+     "missed_percent": 99.60629921259843,
+     "scale": 1.7,
+     "gate": {
+      "cooldown_ms": 0,
+      "min_ms": 0.0,
+      "max_ms": 300.0,
+      "peak_cap": 1.2,
+      "ibi_ratio": null
+     }
+    },
+    {
+     "false_per_hour": 1.5,
+     "missed_percent": 98.81889763779527,
+     "scale": 1.35,
+     "gate": {
+      "cooldown_ms": 0,
+      "min_ms": 80.0,
+      "max_ms": 300.0,
+      "peak_cap": 1.2,
+      "ibi_ratio": null
+     }
+    },
+    {
+     "false_per_hour": 4.5,
+     "missed_percent": 97.63779527559055,
+     "scale": 1.2,
+     "gate": {
+      "cooldown_ms": 0,
+      "min_ms": 80.0,
+      "max_ms": 300.0,
+      "peak_cap": 1.2,
+      "ibi_ratio": null
+     }
+    },
+    {
+     "false_per_hour": 5.25,
+     "missed_percent": 97.24409448818898,
+     "scale": 1.2,
+     "gate": {
+      "cooldown_ms": 0,
+      "min_ms": 80.0,
+      "max_ms": 300.0,
+      "peak_cap": 1.8,
+      "ibi_ratio": null
+     }
+    },
+    {
+     "false_per_hour": 9.75,
+     "missed_percent": 95.66929133858267,
+     "scale": 1.35,
+     "gate": {
+      "cooldown_ms": 0,
+      "min_ms": 0.0,
+      "max_ms": 300.0,
+      "peak_cap": 1.2,
+      "ibi_ratio": null
+     }
+    },
+    {
+     "false_per_hour": 12.75,
+     "missed_percent": 92.51968503937007,
+     "scale": 1.1,
+     "gate": {
+      "cooldown_ms": 0,
+      "min_ms": 80.0,
+      "max_ms": 300.0,
+      "peak_cap": 1.8,
+      "ibi_ratio": null
+     }
+    },
+    {
+     "false_per_hour": 18.0,
+     "missed_percent": 91.73228346456693,
+     "scale": 1.1,
+     "gate": {
+      "cooldown_ms": 0,
+      "min_ms": 80.0,
+      "max_ms": 300.0,
+      "peak_cap": 3.0,
+      "ibi_ratio": null
+     }
+    },
+    {
+     "false_per_hour": 18.75,
+     "missed_percent": 88.58267716535433,
+     "scale": 1.0,
+     "gate": {
+      "cooldown_ms": 0,
+      "min_ms": 80.0,
+      "max_ms": 300.0,
+      "peak_cap": 1.2,
+      "ibi_ratio": null
+     }
+    },
+    {
+     "false_per_hour": 19.5,
+     "missed_percent": 83.07086614173228,
+     "scale": 0.9,
+     "gate": {
+      "cooldown_ms": 0,
+      "min_ms": 80.0,
+      "max_ms": 300.0,
+      "peak_cap": 1.2,
+      "ibi_ratio": null
+     }
+    },
+    {
+     "false_per_hour": 27.75,
+     "missed_percent": 76.37795275590551,
+     "scale": 1.1,
+     "gate": {
+      "cooldown_ms": 0,
+      "min_ms": 0.0,
+      "max_ms": 300.0,
+      "peak_cap": 1.8,
+      "ibi_ratio": null
+     }
+    },
+    {
+     "false_per_hour": 31.5,
+     "missed_percent": 68.50393700787401,
+     "scale": 1.0,
+     "gate": {
+      "cooldown_ms": 0,
+      "min_ms": 0.0,
+      "max_ms": 300.0,
+      "peak_cap": 1.2,
+      "ibi_ratio": null
+     }
+    },
+    {
+     "false_per_hour": 35.25,
+     "missed_percent": 33.07086614173229,
+     "scale": 0.7,
+     "gate": {
+      "cooldown_ms": 0,
+      "min_ms": 80.0,
+      "max_ms": 300.0,
+      "peak_cap": 3.0,
+      "ibi_ratio": null
+     }
+    },
+    {
+     "false_per_hour": 36.0,
+     "missed_percent": 32.28346456692913,
+     "scale": 0.7,
+     "gate": {
+      "cooldown_ms": 0,
+      "min_ms": 80.0,
+      "max_ms": 500.0,
+      "peak_cap": 3.0,
+      "ibi_ratio": null
+     }
+    },
+    {
+     "false_per_hour": 36.75,
+     "missed_percent": 27.95275590551181,
+     "scale": 0.8,
+     "gate": {
+      "cooldown_ms": 0,
+      "min_ms": 0.0,
+      "max_ms": 300.0,
+      "peak_cap": 1.8,
+      "ibi_ratio": null
+     }
+    },
+    {
+     "false_per_hour": 37.5,
+     "missed_percent": 24.409448818897637,
+     "scale": 0.6,
+     "gate": {
+      "cooldown_ms": 0,
+      "min_ms": 80.0,
+      "max_ms": 300.0,
+      "peak_cap": 3.0,
+      "ibi_ratio": 1.6
+     }
+    },
+    {
+     "false_per_hour": 38.25,
+     "missed_percent": 18.89763779527559,
+     "scale": 0.6,
+     "gate": {
+      "cooldown_ms": 0,
+      "min_ms": 80.0,
+      "max_ms": 300.0,
+      "peak_cap": 3.0,
+      "ibi_ratio": null
+     }
+    },
+    {
+     "false_per_hour": 39.0,
+     "missed_percent": 16.141732283464567,
+     "scale": 0.6,
+     "gate": {
+      "cooldown_ms": 0,
+      "min_ms": 80.0,
+      "max_ms": 500.0,
+      "peak_cap": 3.0,
+      "ibi_ratio": null
+     }
+    },
+    {
+     "false_per_hour": 41.25,
+     "missed_percent": 12.204724409448819,
+     "scale": 0.7,
+     "gate": {
+      "cooldown_ms": 0,
+      "min_ms": 0.0,
+      "max_ms": 300.0,
+      "peak_cap": 3.0,
+      "ibi_ratio": null
+     }
+    },
+    {
+     "false_per_hour": 42.0,
+     "missed_percent": 11.41732283464567,
+     "scale": 0.7,
+     "gate": {
+      "cooldown_ms": 0,
+      "min_ms": 0.0,
+      "max_ms": 500.0,
+      "peak_cap": 3.0,
+      "ibi_ratio": null
+     }
+    },
+    {
+     "false_per_hour": 66.0,
+     "missed_percent": 11.023622047244094,
+     "scale": 0.6,
+     "gate": {
+      "cooldown_ms": 0,
+      "min_ms": 0.0,
+      "max_ms": 300.0,
+      "peak_cap": 3.0,
+      "ibi_ratio": null
+     }
+    },
+    {
+     "false_per_hour": 66.75,
+     "missed_percent": 7.874015748031496,
+     "scale": 0.6,
+     "gate": {
+      "cooldown_ms": 0,
+      "min_ms": 0.0,
+      "max_ms": 500.0,
+      "peak_cap": 3.0,
+      "ibi_ratio": null
+     }
+    }
+   ],
+   "both": [
+    {
+     "false_per_hour": 0.0,
+     "missed_percent": 100.0,
+     "scale": 1.5,
+     "gate": {
+      "cooldown_ms": 1000,
+      "min_ms": 80.0,
+      "max_ms": 300.0,
+      "peak_cap": 1.2,
+      "ibi_ratio": null
+     }
+    },
+    {
+     "false_per_hour": 0.75,
+     "missed_percent": 99.60629921259843,
+     "scale": 1.7,
+     "gate": {
+      "cooldown_ms": 1000,
+      "min_ms": 0.0,
+      "max_ms": 300.0,
+      "peak_cap": 1.2,
+      "ibi_ratio": null
+     }
+    },
+    {
+     "false_per_hour": 1.5,
+     "missed_percent": 98.81889763779527,
+     "scale": 1.35,
+     "gate": {
+      "cooldown_ms": 1000,
+      "min_ms": 80.0,
+      "max_ms": 300.0,
+      "peak_cap": 1.2,
+      "ibi_ratio": null
+     }
+    },
+    {
+     "false_per_hour": 4.5,
+     "missed_percent": 97.63779527559055,
+     "scale": 1.2,
+     "gate": {
+      "cooldown_ms": 1000,
+      "min_ms": 80.0,
+      "max_ms": 300.0,
+      "peak_cap": 1.2,
+      "ibi_ratio": null
+     }
+    },
+    {
+     "false_per_hour": 5.25,
+     "missed_percent": 97.24409448818898,
+     "scale": 1.2,
+     "gate": {
+      "cooldown_ms": 1000,
+      "min_ms": 80.0,
+      "max_ms": 300.0,
+      "peak_cap": 1.8,
+      "ibi_ratio": null
+     }
+    },
+    {
+     "false_per_hour": 9.75,
+     "missed_percent": 95.66929133858267,
+     "scale": 1.35,
+     "gate": {
+      "cooldown_ms": 1000,
+      "min_ms": 0.0,
+      "max_ms": 300.0,
+      "peak_cap": 1.2,
+      "ibi_ratio": null
+     }
+    },
+    {
+     "false_per_hour": 12.75,
+     "missed_percent": 92.51968503937007,
+     "scale": 1.1,
+     "gate": {
+      "cooldown_ms": 1000,
+      "min_ms": 80.0,
+      "max_ms": 300.0,
+      "peak_cap": 1.8,
+      "ibi_ratio": null
+     }
+    },
+    {
+     "false_per_hour": 17.25,
+     "missed_percent": 91.73228346456693,
+     "scale": 1.1,
+     "gate": {
+      "cooldown_ms": 1000,
+      "min_ms": 80.0,
+      "max_ms": 300.0,
+      "peak_cap": 3.0,
+      "ibi_ratio": null
+     }
+    },
+    {
+     "false_per_hour": 18.75,
+     "missed_percent": 88.58267716535433,
+     "scale": 1.0,
+     "gate": {
+      "cooldown_ms": 1000,
+      "min_ms": 80.0,
+      "max_ms": 300.0,
+      "peak_cap": 1.2,
+      "ibi_ratio": null
+     }
+    },
+    {
+     "false_per_hour": 19.5,
+     "missed_percent": 83.07086614173228,
+     "scale": 0.9,
+     "gate": {
+      "cooldown_ms": 1000,
+      "min_ms": 80.0,
+      "max_ms": 300.0,
+      "peak_cap": 1.2,
+      "ibi_ratio": null
+     }
+    },
+    {
+     "false_per_hour": 27.0,
+     "missed_percent": 76.77165354330708,
+     "scale": 1.1,
+     "gate": {
+      "cooldown_ms": 3000,
+      "min_ms": 0.0,
+      "max_ms": 300.0,
+      "peak_cap": 1.8,
+      "ibi_ratio": null
+     }
+    },
+    {
+     "false_per_hour": 27.75,
+     "missed_percent": 76.37795275590551,
+     "scale": 1.1,
+     "gate": {
+      "cooldown_ms": 1000,
+      "min_ms": 0.0,
+      "max_ms": 300.0,
+      "peak_cap": 1.8,
+      "ibi_ratio": null
+     }
+    },
+    {
+     "false_per_hour": 30.749999999999996,
+     "missed_percent": 68.89763779527559,
+     "scale": 1.0,
+     "gate": {
+      "cooldown_ms": 3000,
+      "min_ms": 0.0,
+      "max_ms": 300.0,
+      "peak_cap": 1.2,
+      "ibi_ratio": null
+     }
+    },
+    {
+     "false_per_hour": 31.5,
+     "missed_percent": 20.47244094488189,
+     "scale": 0.6,
+     "gate": {
+      "cooldown_ms": 3000,
+      "min_ms": 80.0,
+      "max_ms": 300.0,
+      "peak_cap": 3.0,
+      "ibi_ratio": null
+     }
+    },
+    {
+     "false_per_hour": 32.25,
+     "missed_percent": 18.11023622047244,
+     "scale": 0.6,
+     "gate": {
+      "cooldown_ms": 3000,
+      "min_ms": 80.0,
+      "max_ms": 500.0,
+      "peak_cap": 3.0,
+      "ibi_ratio": null
+     }
+    },
+    {
+     "false_per_hour": 35.25,
+     "missed_percent": 14.960629921259844,
+     "scale": 0.7,
+     "gate": {
+      "cooldown_ms": 3000,
+      "min_ms": 0.0,
+      "max_ms": 300.0,
+      "peak_cap": 3.0,
+      "ibi_ratio": null
+     }
+    },
+    {
+     "false_per_hour": 36.0,
+     "missed_percent": 14.173228346456693,
+     "scale": 0.7,
+     "gate": {
+      "cooldown_ms": 3000,
+      "min_ms": 0.0,
+      "max_ms": 500.0,
+      "peak_cap": 3.0,
+      "ibi_ratio": null
+     }
+    },
+    {
+     "false_per_hour": 40.5,
+     "missed_percent": 12.598425196850393,
+     "scale": 0.7,
+     "gate": {
+      "cooldown_ms": 1000,
+      "min_ms": 0.0,
+      "max_ms": 300.0,
+      "peak_cap": 3.0,
+      "ibi_ratio": null
+     }
+    },
+    {
+     "false_per_hour": 42.0,
+     "missed_percent": 11.811023622047244,
+     "scale": 0.7,
+     "gate": {
+      "cooldown_ms": 1000,
+      "min_ms": 0.0,
+      "max_ms": 500.0,
+      "peak_cap": 3.0,
+      "ibi_ratio": null
+     }
+    },
+    {
+     "false_per_hour": 66.75,
+     "missed_percent": 8.661417322834646,
+     "scale": 0.6,
+     "gate": {
+      "cooldown_ms": 1000,
+      "min_ms": 0.0,
+      "max_ms": 500.0,
+      "peak_cap": 3.0,
+      "ibi_ratio": null
+     }
+    }
+   ]
+  },
+  "firmware_defaults_all_groups": {
+   "false_per_hour": 47.25,
+   "false_per_hour_ci95": [
+    39.375,
+    56.25
+   ],
+   "false_events": 126,
+   "negative_minutes": 160.0,
+   "stream_minutes": 160.0,
+   "missed_percent": 56.850715746421265,
+   "missed_percent_ci95": [
+    53.224948524365125,
+    60.69995590828923
+   ],
+   "commands": 489,
+   "missed_percent_by_kind": {
+    "double": 50.38461538461539,
+    "triple": 64.19213973799127
+   },
+   "false_per_hour_by_group": {
+    "0": 52.5,
+    "1": 45.0,
+    "2": 22.5,
+    "3": 22.5,
+    "4": 105.0,
+    "5": 60.0,
+    "6": 30.0,
+    "7": 30.0,
+    "8": 45.0,
+    "9": 45.0,
+    "100": 30.0,
+    "101": 30.0,
+    "102": 75.0,
+    "103": 60.0,
+    "104": 67.5,
+    "105": 45.0,
+    "106": 52.5,
+    "107": 30.0,
+    "108": 60.0,
+    "109": 37.5
+   },
+   "mean_latency_ms": {
+    "double": 706.1937984496124,
+    "triple": 113.64634146341463
+   }
+  }
+ },
+ "real_background": {
+  "operating_points": {
+   "30.0": {
+    "firmware": {
+     "scale": 0.8,
+     "gate": {
+      "cooldown_ms": 0,
+      "min_ms": 0.0,
+      "max_ms": null,
+      "peak_cap": null,
+      "ibi_ratio": null
+     },
+     "feasible_on_calibration": true,
+     "calibration": {
+      "false_per_hour": 20.388349514563107,
+      "false_per_hour_ci95": [
+       8.103399894048351,
+       33.71287545517691
+      ],
+      "false_events": 63,
+      "negative_minutes": 61.79999999999999,
+      "stream_minutes": 185.39999999999998,
+      "missed_percent": 26.543209876543212,
+      "missed_percent_ci95": [
+       22.22222222222222,
+       31.17283950617284
+      ],
+      "commands": 648,
+      "missed_percent_by_kind": {
+       "double": 23.853211009174313,
+       "triple": 29.283489096573206
+      },
+      "false_per_hour_by_group": {
+       "1": 0.0,
+       "2": 9.756097560975608,
+       "3": 0.0,
+       "7": 25.6,
+       "10": 35.77235772357723,
+       "13": 9.756097560975608,
+       "14": 52.032520325203244,
+       "15": 61.788617886178855,
+       "16": 0.0,
+       "19": 9.756097560975608
+      },
+      "mean_latency_ms": {
+       "double": 691.5542168674699,
+       "triple": 92.34361233480176
+      }
+     },
+     "test": {
+      "false_per_hour": 54.3089430894309,
+      "false_per_hour_ci95": [
+       13.65040650406504,
+       101.46341463414635
+      ],
+      "false_events": 167,
+      "negative_minutes": 61.5,
+      "stream_minutes": 184.5,
+      "missed_percent": 25.847457627118644,
+      "missed_percent_ci95": [
+       23.249299719887954,
+       28.57142857142857
+      ],
+      "commands": 708,
+      "missed_percent_by_kind": {
+       "double": 21.533923303834808,
+       "triple": 29.81029810298103
+      },
+      "false_per_hour_by_group": {
+       "4": 0.0,
+       "5": 0.0,
+       "6": 55.28455284552845,
+       "8": 9.756097560975608,
+       "9": 16.260162601626014,
+       "11": 3.2520325203252027,
+       "12": 198.37398373983737,
+       "17": 178.86178861788613,
+       "18": 81.30081300813006,
+       "20": 0.0
+      },
+      "mean_latency_ms": {
+       "double": 695.0225563909775,
+       "triple": 90.58687258687259
+      }
+     },
+     "false_reduction_vs_firmware_test": {
+      "value": 0.0,
+      "ci95": [
+       0.0,
+       0.0
+      ]
+     }
+    },
+    "cooldown": {
+     "scale": 0.8,
+     "gate": {
+      "cooldown_ms": 1000,
+      "min_ms": 0.0,
+      "max_ms": null,
+      "peak_cap": null,
+      "ibi_ratio": null
+     },
+     "feasible_on_calibration": true,
+     "calibration": {
+      "false_per_hour": 19.7411003236246,
+      "false_per_hour_ci95": [
+       8.077544426494347,
+       32.58328113581792
+      ],
+      "false_events": 61,
+      "negative_minutes": 61.79999999999999,
+      "stream_minutes": 185.39999999999998,
+      "missed_percent": 26.69753086419753,
+      "missed_percent_ci95": [
+       22.35763888888889,
+       31.32716049382716
+      ],
+      "commands": 648,
+      "missed_percent_by_kind": {
+       "double": 23.853211009174313,
+       "triple": 29.595015576323984
+      },
+      "false_per_hour_by_group": {
+       "1": 0.0,
+       "2": 9.756097560975608,
+       "3": 0.0,
+       "7": 22.400000000000002,
+       "10": 35.77235772357723,
+       "13": 9.756097560975608,
+       "14": 52.032520325203244,
+       "15": 58.536585365853654,
+       "16": 0.0,
+       "19": 9.756097560975608
+      },
+      "mean_latency_ms": {
+       "double": 691.5542168674699,
+       "triple": 92.28761061946902
+      }
+     },
+     "test": {
+      "false_per_hour": 45.85365853658537,
+      "false_per_hour_ci95": [
+       11.382113821138212,
+       85.86991869918691
+      ],
+      "false_events": 141,
+      "negative_minutes": 61.5,
+      "stream_minutes": 184.5,
+      "missed_percent": 26.129943502824858,
+      "missed_percent_ci95": [
+       23.70632940108893,
+       28.711484593837532
+      ],
+      "commands": 708,
+      "missed_percent_by_kind": {
+       "double": 21.828908554572273,
+       "triple": 30.081300813008134
+      },
+      "false_per_hour_by_group": {
+       "4": 0.0,
+       "5": 0.0,
+       "6": 42.27642276422763,
+       "8": 9.756097560975608,
+       "9": 13.008130081300811,
+       "11": 3.2520325203252027,
+       "12": 152.84552845528452,
+       "17": 156.09756097560972,
+       "18": 81.30081300813006,
+       "20": 0.0
+      },
+      "mean_latency_ms": {
+       "double": 694.9735849056603,
+       "triple": 90.71705426356588
+      }
+     },
+     "false_reduction_vs_firmware_test": {
+      "value": 0.15568862275449102,
+      "ci95": [
+       0.04877309682187735,
+       0.22335160384490765
+      ]
+     }
+    },
+    "gate": {
+     "scale": 0.8,
+     "gate": {
+      "cooldown_ms": 0,
+      "min_ms": 0.0,
+      "max_ms": 300.0,
+      "peak_cap": 1.8,
+      "ibi_ratio": null
+     },
+     "feasible_on_calibration": true,
+     "calibration": {
+      "false_per_hour": 13.592233009708739,
+      "false_per_hour_ci95": [
+       6.434164063295203,
+       20.784780647462362
+      ],
+      "false_events": 42,
+      "negative_minutes": 61.79999999999999,
+      "stream_minutes": 185.39999999999998,
+      "missed_percent": 24.228395061728396,
+      "missed_percent_ci95": [
+       21.006944444444446,
+       27.361111111111114
+      ],
+      "commands": 648,
+      "missed_percent_by_kind": {
+       "double": 19.877675840978593,
+       "triple": 28.66043613707165
+      },
+      "false_per_hour_by_group": {
+       "1": 0.0,
+       "2": 9.756097560975608,
+       "3": 0.0,
+       "7": 22.400000000000002,
+       "10": 32.52032520325203,
+       "13": 9.756097560975608,
+       "14": 26.016260162601622,
+       "15": 29.268292682926827,
+       "16": 0.0,
+       "19": 6.5040650406504055
+      },
+      "mean_latency_ms": {
+       "double": 806.9007633587786,
+       "triple": 207.16157205240174
+      }
+     },
+     "test": {
+      "false_per_hour": 48.45528455284553,
+      "false_per_hour_ci95": [
+       10.723577235772359,
+       92.6829268292683
+      ],
+      "false_events": 149,
+      "negative_minutes": 61.5,
+      "stream_minutes": 184.5,
+      "missed_percent": 25.423728813559322,
+      "missed_percent_ci95": [
+       22.64957264957265,
+       28.57142857142857
+      ],
+      "commands": 708,
+      "missed_percent_by_kind": {
+       "double": 21.238938053097346,
+       "triple": 29.268292682926827
+      },
+      "false_per_hour_by_group": {
+       "4": 0.0,
+       "5": 0.0,
+       "6": 39.02439024390243,
+       "8": 9.756097560975608,
+       "9": 16.260162601626014,
+       "11": 0.0,
+       "12": 159.34959349593495,
+       "17": 188.61788617886174,
+       "18": 71.54471544715446,
+       "20": 0.0
+      },
+      "mean_latency_ms": {
+       "double": 806.3071161048689,
+       "triple": 207.3256704980843
+      }
+     },
+     "false_reduction_vs_firmware_test": {
+      "value": 0.10778443113772451,
+      "ci95": [
+       -0.01613564251718666,
+       0.23232323232323238
+      ]
+     }
+    },
+    "both": {
+     "scale": 0.8,
+     "gate": {
+      "cooldown_ms": 1000,
+      "min_ms": 0.0,
+      "max_ms": 300.0,
+      "peak_cap": 1.8,
+      "ibi_ratio": null
+     },
+     "feasible_on_calibration": true,
+     "calibration": {
+      "false_per_hour": 13.592233009708739,
+      "false_per_hour_ci95": [
+       6.434164063295203,
+       20.784780647462362
+      ],
+      "false_events": 42,
+      "negative_minutes": 61.79999999999999,
+      "stream_minutes": 185.39999999999998,
+      "missed_percent": 24.537037037037038,
+      "missed_percent_ci95": [
+       21.352719907407405,
+       27.623456790123456
+      ],
+      "commands": 648,
+      "missed_percent_by_kind": {
+       "double": 19.877675840978593,
+       "triple": 29.283489096573206
+      },
+      "false_per_hour_by_group": {
+       "1": 0.0,
+       "2": 9.756097560975608,
+       "3": 0.0,
+       "7": 22.400000000000002,
+       "10": 32.52032520325203,
+       "13": 9.756097560975608,
+       "14": 26.016260162601622,
+       "15": 29.268292682926827,
+       "16": 0.0,
+       "19": 6.5040650406504055
+      },
+      "mean_latency_ms": {
+       "double": 806.9007633587786,
+       "triple": 207.1013215859031
+      }
+     },
+     "test": {
+      "false_per_hour": 41.951219512195124,
+      "false_per_hour_ci95": [
+       10.073170731707318,
+       79.34959349593497
+      ],
+      "false_events": 129,
+      "negative_minutes": 61.5,
+      "stream_minutes": 184.5,
+      "missed_percent": 25.56497175141243,
+      "missed_percent_ci95": [
+       22.88135593220339,
+       28.63347457627118
+      ],
+      "commands": 708,
+      "missed_percent_by_kind": {
+       "double": 21.238938053097346,
+       "triple": 29.539295392953928
+      },
+      "false_per_hour_by_group": {
+       "4": 0.0,
+       "5": 0.0,
+       "6": 35.77235772357723,
+       "8": 9.756097560975608,
+       "9": 13.008130081300811,
+       "11": 0.0,
+       "12": 139.83739837398372,
+       "17": 149.59349593495935,
+       "18": 71.54471544715446,
+       "20": 0.0
+      },
+      "mean_latency_ms": {
+       "double": 806.3071161048689,
+       "triple": 207.46923076923076
+      }
+     },
+     "false_reduction_vs_firmware_test": {
+      "value": 0.22754491017964074,
+      "ci95": [
+       0.14811416921508663,
+       0.31169610389610386
+      ]
+     }
+    }
+   },
+   "20.0": {
+    "firmware": {
+     "scale": 0.8,
+     "gate": {
+      "cooldown_ms": 0,
+      "min_ms": 0.0,
+      "max_ms": null,
+      "peak_cap": null,
+      "ibi_ratio": null
+     },
+     "feasible_on_calibration": false,
+     "calibration": {
+      "false_per_hour": 20.388349514563107,
+      "false_per_hour_ci95": [
+       8.103399894048351,
+       33.71287545517691
+      ],
+      "false_events": 63,
+      "negative_minutes": 61.79999999999999,
+      "stream_minutes": 185.39999999999998,
+      "missed_percent": 26.543209876543212,
+      "missed_percent_ci95": [
+       22.22222222222222,
+       31.17283950617284
+      ],
+      "commands": 648,
+      "missed_percent_by_kind": {
+       "double": 23.853211009174313,
+       "triple": 29.283489096573206
+      },
+      "false_per_hour_by_group": {
+       "1": 0.0,
+       "2": 9.756097560975608,
+       "3": 0.0,
+       "7": 25.6,
+       "10": 35.77235772357723,
+       "13": 9.756097560975608,
+       "14": 52.032520325203244,
+       "15": 61.788617886178855,
+       "16": 0.0,
+       "19": 9.756097560975608
+      },
+      "mean_latency_ms": {
+       "double": 691.5542168674699,
+       "triple": 92.34361233480176
+      }
+     },
+     "test": {
+      "false_per_hour": 54.3089430894309,
+      "false_per_hour_ci95": [
+       13.65040650406504,
+       101.46341463414635
+      ],
+      "false_events": 167,
+      "negative_minutes": 61.5,
+      "stream_minutes": 184.5,
+      "missed_percent": 25.847457627118644,
+      "missed_percent_ci95": [
+       23.249299719887954,
+       28.57142857142857
+      ],
+      "commands": 708,
+      "missed_percent_by_kind": {
+       "double": 21.533923303834808,
+       "triple": 29.81029810298103
+      },
+      "false_per_hour_by_group": {
+       "4": 0.0,
+       "5": 0.0,
+       "6": 55.28455284552845,
+       "8": 9.756097560975608,
+       "9": 16.260162601626014,
+       "11": 3.2520325203252027,
+       "12": 198.37398373983737,
+       "17": 178.86178861788613,
+       "18": 81.30081300813006,
+       "20": 0.0
+      },
+      "mean_latency_ms": {
+       "double": 695.0225563909775,
+       "triple": 90.58687258687259
+      }
+     },
+     "false_reduction_vs_firmware_test": {
+      "value": 0.0,
+      "ci95": [
+       0.0,
+       0.0
+      ]
+     }
+    },
+    "cooldown": {
+     "scale": 0.8,
+     "gate": {
+      "cooldown_ms": 1000,
+      "min_ms": 0.0,
+      "max_ms": null,
+      "peak_cap": null,
+      "ibi_ratio": null
+     },
+     "feasible_on_calibration": false,
+     "calibration": {
+      "false_per_hour": 19.7411003236246,
+      "false_per_hour_ci95": [
+       8.077544426494347,
+       32.58328113581792
+      ],
+      "false_events": 61,
+      "negative_minutes": 61.79999999999999,
+      "stream_minutes": 185.39999999999998,
+      "missed_percent": 26.69753086419753,
+      "missed_percent_ci95": [
+       22.35763888888889,
+       31.32716049382716
+      ],
+      "commands": 648,
+      "missed_percent_by_kind": {
+       "double": 23.853211009174313,
+       "triple": 29.595015576323984
+      },
+      "false_per_hour_by_group": {
+       "1": 0.0,
+       "2": 9.756097560975608,
+       "3": 0.0,
+       "7": 22.400000000000002,
+       "10": 35.77235772357723,
+       "13": 9.756097560975608,
+       "14": 52.032520325203244,
+       "15": 58.536585365853654,
+       "16": 0.0,
+       "19": 9.756097560975608
+      },
+      "mean_latency_ms": {
+       "double": 691.5542168674699,
+       "triple": 92.28761061946902
+      }
+     },
+     "test": {
+      "false_per_hour": 45.85365853658537,
+      "false_per_hour_ci95": [
+       11.382113821138212,
+       85.86991869918691
+      ],
+      "false_events": 141,
+      "negative_minutes": 61.5,
+      "stream_minutes": 184.5,
+      "missed_percent": 26.129943502824858,
+      "missed_percent_ci95": [
+       23.70632940108893,
+       28.711484593837532
+      ],
+      "commands": 708,
+      "missed_percent_by_kind": {
+       "double": 21.828908554572273,
+       "triple": 30.081300813008134
+      },
+      "false_per_hour_by_group": {
+       "4": 0.0,
+       "5": 0.0,
+       "6": 42.27642276422763,
+       "8": 9.756097560975608,
+       "9": 13.008130081300811,
+       "11": 3.2520325203252027,
+       "12": 152.84552845528452,
+       "17": 156.09756097560972,
+       "18": 81.30081300813006,
+       "20": 0.0
+      },
+      "mean_latency_ms": {
+       "double": 694.9735849056603,
+       "triple": 90.71705426356588
+      }
+     },
+     "false_reduction_vs_firmware_test": {
+      "value": 0.15568862275449102,
+      "ci95": [
+       0.04877309682187735,
+       0.22335160384490765
+      ]
+     }
+    },
+    "gate": {
+     "scale": 0.6,
+     "gate": {
+      "cooldown_ms": 0,
+      "min_ms": 80.0,
+      "max_ms": 500.0,
+      "peak_cap": 3.0,
+      "ibi_ratio": null
+     },
+     "feasible_on_calibration": true,
+     "calibration": {
+      "false_per_hour": 17.15210355987055,
+      "false_per_hour_ci95": [
+       9.369951534733442,
+       25.201938610662356
+      ],
+      "false_events": 53,
+      "negative_minutes": 61.79999999999999,
+      "stream_minutes": 185.39999999999998,
+      "missed_percent": 17.59259259259259,
+      "missed_percent_ci95": [
+       13.368055555555555,
+       21.29774305555555
+      ],
+      "commands": 648,
+      "missed_percent_by_kind": {
+       "double": 12.844036697247708,
+       "triple": 22.429906542056074
+      },
+      "false_per_hour_by_group": {
+       "1": 9.6,
+       "2": 19.512195121951216,
+       "3": 0.0,
+       "7": 28.799999999999997,
+       "10": 39.02439024390243,
+       "13": 19.512195121951216,
+       "14": 32.52032520325203,
+       "15": 19.512195121951216,
+       "16": 0.0,
+       "19": 3.2520325203252027
+      },
+      "mean_latency_ms": {
+       "double": 839.6666666666666,
+       "triple": 237.51004016064257
+      }
+     },
+     "test": {
+      "false_per_hour": 53.983739837398375,
+      "false_per_hour_ci95": [
+       12.032520325203253,
+       103.74796747967476
+      ],
+      "false_events": 166,
+      "negative_minutes": 61.5,
+      "stream_minutes": 184.5,
+      "missed_percent": 16.807909604519775,
+      "missed_percent_ci95": [
+       13.471673976608187,
+       20.028011204481793
+      ],
+      "commands": 708,
+      "missed_percent_by_kind": {
+       "double": 16.224188790560472,
+       "triple": 17.344173441734416
+      },
+      "false_per_hour_by_group": {
+       "4": 0.0,
+       "5": 0.0,
+       "6": 45.52845528455284,
+       "8": 6.5040650406504055,
+       "9": 16.260162601626014,
+       "11": 9.756097560975608,
+       "12": 152.84552845528452,
+       "17": 237.3983739837398,
+       "18": 71.54471544715446,
+       "20": 0.0
+      },
+      "mean_latency_ms": {
+       "double": 840.9471830985915,
+       "triple": 241.68196721311475
+      }
+     },
+     "false_reduction_vs_firmware_test": {
+      "value": 0.005988023952095856,
+      "ci95": [
+       -0.2698554421768707,
+       0.20886312110334404
+      ]
+     }
+    },
+    "both": {
+     "scale": 0.6,
+     "gate": {
+      "cooldown_ms": 1000,
+      "min_ms": 80.0,
+      "max_ms": 500.0,
+      "peak_cap": 3.0,
+      "ibi_ratio": null
+     },
+     "feasible_on_calibration": true,
+     "calibration": {
+      "false_per_hour": 17.15210355987055,
+      "false_per_hour_ci95": [
+       9.369951534733442,
+       25.201938610662356
+      ],
+      "false_events": 53,
+      "negative_minutes": 61.79999999999999,
+      "stream_minutes": 185.39999999999998,
+      "missed_percent": 17.901234567901234,
+      "missed_percent_ci95": [
+       13.88888888888889,
+       21.604938271604937
+      ],
+      "commands": 648,
+      "missed_percent_by_kind": {
+       "double": 12.844036697247708,
+       "triple": 23.05295950155763
+      },
+      "false_per_hour_by_group": {
+       "1": 9.6,
+       "2": 19.512195121951216,
+       "3": 0.0,
+       "7": 28.799999999999997,
+       "10": 39.02439024390243,
+       "13": 19.512195121951216,
+       "14": 32.52032520325203,
+       "15": 19.512195121951216,
+       "16": 0.0,
+       "19": 3.2520325203252027
+      },
+      "mean_latency_ms": {
+       "double": 839.6666666666666,
+       "triple": 237.40080971659918
+      }
+     },
+     "test": {
+      "false_per_hour": 51.38211382113821,
+      "false_per_hour_ci95": [
+       11.707317073170731,
+       98.21138211382114
+      ],
+      "false_events": 158,
+      "negative_minutes": 61.5,
+      "stream_minutes": 184.5,
+      "missed_percent": 17.231638418079097,
+      "missed_percent_ci95": [
+       13.767480294940249,
+       20.371980676328494
+      ],
+      "commands": 708,
+      "missed_percent_by_kind": {
+       "double": 16.8141592920354,
+       "triple": 17.615176151761517
+      },
+      "false_per_hour_by_group": {
+       "4": 0.0,
+       "5": 0.0,
+       "6": 42.27642276422763,
+       "8": 6.5040650406504055,
+       "9": 16.260162601626014,
+       "11": 9.756097560975608,
+       "12": 143.08943089430892,
+       "17": 224.39024390243898,
+       "18": 71.54471544715446,
+       "20": 0.0
+      },
+      "mean_latency_ms": {
+       "double": 841.0212765957447,
+       "triple": 241.87828947368422
+      }
+     },
+     "false_reduction_vs_firmware_test": {
+      "value": 0.053892215568862256,
+      "ci95": [
+       -0.20896093512031672,
+       0.2534630992502923
+      ]
+     }
+    }
+   }
+  },
+  "frontier": {
+   "firmware": [
+    {
+     "false_per_hour": 0.0,
+     "missed_percent": 99.85875706214689,
+     "scale": 1.7,
+     "gate": {
+      "cooldown_ms": 0,
+      "min_ms": 0.0,
+      "max_ms": null,
+      "peak_cap": null,
+      "ibi_ratio": null
+     }
+    },
+    {
+     "false_per_hour": 0.9756097560975611,
+     "missed_percent": 98.58757062146893,
+     "scale": 1.5,
+     "gate": {
+      "cooldown_ms": 0,
+      "min_ms": 0.0,
+      "max_ms": null,
+      "peak_cap": null,
+      "ibi_ratio": null
+     }
+    },
+    {
+     "false_per_hour": 1.9512195121951221,
+     "missed_percent": 96.1864406779661,
+     "scale": 1.35,
+     "gate": {
+      "cooldown_ms": 0,
+      "min_ms": 0.0,
+      "max_ms": null,
+      "peak_cap": null,
+      "ibi_ratio": null
+     }
+    },
+    {
+     "false_per_hour": 4.5528455284552845,
+     "missed_percent": 88.5593220338983,
+     "scale": 1.2,
+     "gate": {
+      "cooldown_ms": 0,
+      "min_ms": 0.0,
+      "max_ms": null,
+      "peak_cap": null,
+      "ibi_ratio": null
+     }
+    },
+    {
+     "false_per_hour": 8.780487804878048,
+     "missed_percent": 77.54237288135593,
+     "scale": 1.1,
+     "gate": {
+      "cooldown_ms": 0,
+      "min_ms": 0.0,
+      "max_ms": null,
+      "peak_cap": null,
+      "ibi_ratio": null
+     }
+    },
+    {
+     "false_per_hour": 19.1869918699187,
+     "missed_percent": 59.7457627118644,
+     "scale": 1.0,
+     "gate": {
+      "cooldown_ms": 0,
+      "min_ms": 0.0,
+      "max_ms": null,
+      "peak_cap": null,
+      "ibi_ratio": null
+     }
+    },
+    {
+     "false_per_hour": 31.219512195121954,
+     "missed_percent": 40.67796610169492,
+     "scale": 0.9,
+     "gate": {
+      "cooldown_ms": 0,
+      "min_ms": 0.0,
+      "max_ms": null,
+      "peak_cap": null,
+      "ibi_ratio": null
+     }
+    },
+    {
+     "false_per_hour": 54.3089430894309,
+     "missed_percent": 25.847457627118644,
+     "scale": 0.8,
+     "gate": {
+      "cooldown_ms": 0,
+      "min_ms": 0.0,
+      "max_ms": null,
+      "peak_cap": null,
+      "ibi_ratio": null
+     }
+    }
+   ],
+   "cooldown": [
+    {
+     "false_per_hour": 0.0,
+     "missed_percent": 99.85875706214689,
+     "scale": 1.7,
+     "gate": {
+      "cooldown_ms": 1000,
+      "min_ms": 0.0,
+      "max_ms": null,
+      "peak_cap": null,
+      "ibi_ratio": null
+     }
+    },
+    {
+     "false_per_hour": 0.9756097560975611,
+     "missed_percent": 98.58757062146893,
+     "scale": 1.5,
+     "gate": {
+      "cooldown_ms": 1000,
+      "min_ms": 0.0,
+      "max_ms": null,
+      "peak_cap": null,
+      "ibi_ratio": null
+     }
+    },
+    {
+     "false_per_hour": 1.6260162601626018,
+     "missed_percent": 96.1864406779661,
+     "scale": 1.35,
+     "gate": {
+      "cooldown_ms": 1000,
+      "min_ms": 0.0,
+      "max_ms": null,
+      "peak_cap": null,
+      "ibi_ratio": null
+     }
+    },
+    {
+     "false_per_hour": 3.9024390243902443,
+     "missed_percent": 88.5593220338983,
+     "scale": 1.2,
+     "gate": {
+      "cooldown_ms": 1000,
+      "min_ms": 0.0,
+      "max_ms": null,
+      "peak_cap": null,
+      "ibi_ratio": null
+     }
+    },
+    {
+     "false_per_hour": 8.130081300813007,
+     "missed_percent": 77.68361581920904,
+     "scale": 1.1,
+     "gate": {
+      "cooldown_ms": 3000,
+      "min_ms": 0.0,
+      "max_ms": null,
+      "peak_cap": null,
+      "ibi_ratio": null
+     }
+    },
+    {
+     "false_per_hour": 8.455284552845528,
+     "missed_percent": 77.54237288135593,
+     "scale": 1.1,
+     "gate": {
+      "cooldown_ms": 1000,
+      "min_ms": 0.0,
+      "max_ms": null,
+      "peak_cap": null,
+      "ibi_ratio": null
+     }
+    },
+    {
+     "false_per_hour": 16.585365853658537,
+     "missed_percent": 60.31073446327684,
+     "scale": 1.0,
+     "gate": {
+      "cooldown_ms": 3000,
+      "min_ms": 0.0,
+      "max_ms": null,
+      "peak_cap": null,
+      "ibi_ratio": null
+     }
+    },
+    {
+     "false_per_hour": 17.88617886178862,
+     "missed_percent": 59.7457627118644,
+     "scale": 1.0,
+     "gate": {
+      "cooldown_ms": 1000,
+      "min_ms": 0.0,
+      "max_ms": null,
+      "peak_cap": null,
+      "ibi_ratio": null
+     }
+    },
+    {
+     "false_per_hour": 25.040650406504064,
+     "missed_percent": 42.51412429378531,
+     "scale": 0.9,
+     "gate": {
+      "cooldown_ms": 3000,
+      "min_ms": 0.0,
+      "max_ms": null,
+      "peak_cap": null,
+      "ibi_ratio": null
+     }
+    },
+    {
+     "false_per_hour": 27.64227642276423,
+     "missed_percent": 40.67796610169492,
+     "scale": 0.9,
+     "gate": {
+      "cooldown_ms": 1000,
+      "min_ms": 0.0,
+      "max_ms": null,
+      "peak_cap": null,
+      "ibi_ratio": null
+     }
+    },
+    {
+     "false_per_hour": 39.674796747967484,
+     "missed_percent": 28.8135593220339,
+     "scale": 0.8,
+     "gate": {
+      "cooldown_ms": 3000,
+      "min_ms": 0.0,
+      "max_ms": null,
+      "peak_cap": null,
+      "ibi_ratio": null
+     }
+    },
+    {
+     "false_per_hour": 45.85365853658537,
+     "missed_percent": 26.129943502824858,
+     "scale": 0.8,
+     "gate": {
+      "cooldown_ms": 1000,
+      "min_ms": 0.0,
+      "max_ms": null,
+      "peak_cap": null,
+      "ibi_ratio": null
+     }
+    }
+   ],
+   "gate": [
+    {
+     "false_per_hour": 0.0,
+     "missed_percent": 99.29378531073446,
+     "scale": 1.35,
+     "gate": {
+      "cooldown_ms": 0,
+      "min_ms": 80.0,
+      "max_ms": 300.0,
+      "peak_cap": 1.8,
+      "ibi_ratio": null
+     }
+    },
+    {
+     "false_per_hour": 0.9756097560975611,
+     "missed_percent": 98.58757062146893,
+     "scale": 1.5,
+     "gate": {
+      "cooldown_ms": 0,
+      "min_ms": 0.0,
+      "max_ms": 300.0,
+      "peak_cap": 1.2,
+      "ibi_ratio": null
+     }
+    },
+    {
+     "false_per_hour": 1.6260162601626018,
+     "missed_percent": 97.45762711864407,
+     "scale": 1.2,
+     "gate": {
+      "cooldown_ms": 0,
+      "min_ms": 80.0,
+      "max_ms": 300.0,
+      "peak_cap": 1.8,
+      "ibi_ratio": null
+     }
+    },
+    {
+     "false_per_hour": 2.2764227642276422,
+     "missed_percent": 96.1864406779661,
+     "scale": 1.35,
+     "gate": {
+      "cooldown_ms": 0,
+      "min_ms": 0.0,
+      "max_ms": 300.0,
+      "peak_cap": 1.8,
+      "ibi_ratio": null
+     }
+    },
+    {
+     "false_per_hour": 3.2520325203252036,
+     "missed_percent": 95.48022598870057,
+     "scale": 1.1,
+     "gate": {
+      "cooldown_ms": 0,
+      "min_ms": 80.0,
+      "max_ms": 300.0,
+      "peak_cap": 1.2,
+      "ibi_ratio": null
+     }
+    },
+    {
+     "false_per_hour": 3.5772357723577235,
+     "missed_percent": 94.77401129943502,
+     "scale": 1.1,
+     "gate": {
+      "cooldown_ms": 0,
+      "min_ms": 80.0,
+      "max_ms": 300.0,
+      "peak_cap": 1.8,
+      "ibi_ratio": 1.6
+     }
+    },
+    {
+     "false_per_hour": 3.9024390243902443,
+     "missed_percent": 94.2090395480226,
+     "scale": 1.1,
+     "gate": {
+      "cooldown_ms": 0,
+      "min_ms": 80.0,
+      "max_ms": 300.0,
+      "peak_cap": 1.8,
+      "ibi_ratio": null
+     }
+    },
+    {
+     "false_per_hour": 5.203252032520325,
+     "missed_percent": 89.40677966101694,
+     "scale": 1.2,
+     "gate": {
+      "cooldown_ms": 0,
+      "min_ms": 0.0,
+      "max_ms": 300.0,
+      "peak_cap": 1.8,
+      "ibi_ratio": 1.6
+     }
+    },
+    {
+     "false_per_hour": 5.528455284552845,
+     "missed_percent": 87.42937853107344,
+     "scale": 1.0,
+     "gate": {
+      "cooldown_ms": 0,
+      "min_ms": 80.0,
+      "max_ms": 300.0,
+      "peak_cap": 1.8,
+      "ibi_ratio": 1.6
+     }
+    },
+    {
+     "false_per_hour": 6.504065040650407,
+     "missed_percent": 86.86440677966102,
+     "scale": 1.0,
+     "gate": {
+      "cooldown_ms": 0,
+      "min_ms": 80.0,
+      "max_ms": 300.0,
+      "peak_cap": 1.8,
+      "ibi_ratio": null
+     }
+    },
+    {
+     "false_per_hour": 9.105691056910569,
+     "missed_percent": 80.7909604519774,
+     "scale": 1.1,
+     "gate": {
+      "cooldown_ms": 0,
+      "min_ms": 0.0,
+      "max_ms": 300.0,
+      "peak_cap": 1.2,
+      "ibi_ratio": 1.6
+     }
+    },
+    {
+     "false_per_hour": 9.430894308943088,
+     "missed_percent": 79.09604519774011,
+     "scale": 1.1,
+     "gate": {
+      "cooldown_ms": 0,
+      "min_ms": 0.0,
+      "max_ms": 300.0,
+      "peak_cap": 1.8,
+      "ibi_ratio": 1.6
+     }
+    },
+    {
+     "false_per_hour": 10.08130081300813,
+     "missed_percent": 77.82485875706215,
+     "scale": 1.1,
+     "gate": {
+      "cooldown_ms": 0,
+      "min_ms": 0.0,
+      "max_ms": 300.0,
+      "peak_cap": 1.8,
+      "ibi_ratio": null
+     }
+    },
+    {
+     "false_per_hour": 13.333333333333332,
+     "missed_percent": 73.1638418079096,
+     "scale": 0.9,
+     "gate": {
+      "cooldown_ms": 0,
+      "min_ms": 80.0,
+      "max_ms": 300.0,
+      "peak_cap": 3.0,
+      "ibi_ratio": 1.6
+     }
+    },
+    {
+     "false_per_hour": 14.308943089430894,
+     "missed_percent": 72.88135593220339,
+     "scale": 0.9,
+     "gate": {
+      "cooldown_ms": 0,
+      "min_ms": 80.0,
+      "max_ms": 300.0,
+      "peak_cap": 3.0,
+      "ibi_ratio": null
+     }
+    },
+    {
+     "false_per_hour": 18.53658536585366,
+     "missed_percent": 61.5819209039548,
+     "scale": 1.0,
+     "gate": {
+      "cooldown_ms": 0,
+      "min_ms": 0.0,
+      "max_ms": 300.0,
+      "peak_cap": 1.8,
+      "ibi_ratio": 1.6
+     }
+    },
+    {
+     "false_per_hour": 20.16260162601626,
+     "missed_percent": 59.887005649717516,
+     "scale": 1.0,
+     "gate": {
+      "cooldown_ms": 0,
+      "min_ms": 0.0,
+      "max_ms": 300.0,
+      "peak_cap": 1.8,
+      "ibi_ratio": null
+     }
+    },
+    {
+     "false_per_hour": 23.089430894308943,
+     "missed_percent": 55.08474576271186,
+     "scale": 0.8,
+     "gate": {
+      "cooldown_ms": 0,
+      "min_ms": 80.0,
+      "max_ms": 300.0,
+      "peak_cap": 3.0,
+      "ibi_ratio": 1.6
+     }
+    },
+    {
+     "false_per_hour": 24.390243902439025,
+     "missed_percent": 53.813559322033896,
+     "scale": 0.8,
+     "gate": {
+      "cooldown_ms": 0,
+      "min_ms": 80.0,
+      "max_ms": 500.0,
+      "peak_cap": 3.0,
+      "ibi_ratio": null
+     }
+    },
+    {
+     "false_per_hour": 27.64227642276423,
+     "missed_percent": 44.06779661016949,
+     "scale": 0.9,
+     "gate": {
+      "cooldown_ms": 0,
+      "min_ms": 0.0,
+      "max_ms": 300.0,
+      "peak_cap": 3.0,
+      "ibi_ratio": 1.6
+     }
+    },
+    {
+     "false_per_hour": 29.59349593495935,
+     "missed_percent": 40.81920903954802,
+     "scale": 0.9,
+     "gate": {
+      "cooldown_ms": 0,
+      "min_ms": 0.0,
+      "max_ms": 300.0,
+      "peak_cap": 3.0,
+      "ibi_ratio": null
+     }
+    },
+    {
+     "false_per_hour": 34.796747967479675,
+     "missed_percent": 34.6045197740113,
+     "scale": 0.7,
+     "gate": {
+      "cooldown_ms": 0,
+      "min_ms": 80.0,
+      "max_ms": 300.0,
+      "peak_cap": 3.0,
+      "ibi_ratio": 1.6
+     }
+    },
+    {
+     "false_per_hour": 35.447154471544714,
+     "missed_percent": 34.32203389830508,
+     "scale": 0.7,
+     "gate": {
+      "cooldown_ms": 0,
+      "min_ms": 80.0,
+      "max_ms": 500.0,
+      "peak_cap": 3.0,
+      "ibi_ratio": 1.6
+     }
+    },
+    {
+     "false_per_hour": 36.09756097560976,
+     "missed_percent": 32.06214689265537,
+     "scale": 0.7,
+     "gate": {
+      "cooldown_ms": 0,
+      "min_ms": 80.0,
+      "max_ms": 300.0,
+      "peak_cap": 3.0,
+      "ibi_ratio": null
+     }
+    },
+    {
+     "false_per_hour": 36.7479674796748,
+     "missed_percent": 31.35593220338983,
+     "scale": 0.7,
+     "gate": {
+      "cooldown_ms": 0,
+      "min_ms": 80.0,
+      "max_ms": 500.0,
+      "peak_cap": 3.0,
+      "ibi_ratio": null
+     }
+    },
+    {
+     "false_per_hour": 46.5040650406504,
+     "missed_percent": 27.54237288135593,
+     "scale": 0.8,
+     "gate": {
+      "cooldown_ms": 0,
+      "min_ms": 0.0,
+      "max_ms": 300.0,
+      "peak_cap": 3.0,
+      "ibi_ratio": 1.6
+     }
+    },
+    {
+     "false_per_hour": 48.45528455284553,
+     "missed_percent": 22.74011299435028,
+     "scale": 0.8,
+     "gate": {
+      "cooldown_ms": 0,
+      "min_ms": 0.0,
+      "max_ms": 500.0,
+      "peak_cap": 3.0,
+      "ibi_ratio": null
+     }
+    },
+    {
+     "false_per_hour": 52.03252032520326,
+     "missed_percent": 19.2090395480226,
+     "scale": 0.6,
+     "gate": {
+      "cooldown_ms": 0,
+      "min_ms": 80.0,
+      "max_ms": 300.0,
+      "peak_cap": 3.0,
+      "ibi_ratio": null
+     }
+    },
+    {
+     "false_per_hour": 53.983739837398375,
+     "missed_percent": 16.807909604519775,
+     "scale": 0.6,
+     "gate": {
+      "cooldown_ms": 0,
+      "min_ms": 80.0,
+      "max_ms": 500.0,
+      "peak_cap": 3.0,
+      "ibi_ratio": null
+     }
+    },
+    {
+     "false_per_hour": 69.91869918699186,
+     "missed_percent": 11.72316384180791,
+     "scale": 0.7,
+     "gate": {
+      "cooldown_ms": 0,
+      "min_ms": 0.0,
+      "max_ms": 300.0,
+      "peak_cap": 3.0,
+      "ibi_ratio": null
+     }
+    },
+    {
+     "false_per_hour": 70.89430894308943,
+     "missed_percent": 10.875706214689265,
+     "scale": 0.7,
+     "gate": {
+      "cooldown_ms": 0,
+      "min_ms": 0.0,
+      "max_ms": 500.0,
+      "peak_cap": 3.0,
+      "ibi_ratio": null
+     }
+    },
+    {
+     "false_per_hour": 104.06504065040652,
+     "missed_percent": 8.615819209039548,
+     "scale": 0.6,
+     "gate": {
+      "cooldown_ms": 0,
+      "min_ms": 0.0,
+      "max_ms": 500.0,
+      "peak_cap": 3.0,
+      "ibi_ratio": null
+     }
+    }
+   ],
+   "both": [
+    {
+     "false_per_hour": 0.0,
+     "missed_percent": 99.29378531073446,
+     "scale": 1.35,
+     "gate": {
+      "cooldown_ms": 1000,
+      "min_ms": 80.0,
+      "max_ms": 300.0,
+      "peak_cap": 1.8,
+      "ibi_ratio": null
+     }
+    },
+    {
+     "false_per_hour": 0.9756097560975611,
+     "missed_percent": 98.58757062146893,
+     "scale": 1.5,
+     "gate": {
+      "cooldown_ms": 1000,
+      "min_ms": 0.0,
+      "max_ms": 300.0,
+      "peak_cap": 1.2,
+      "ibi_ratio": null
+     }
+    },
+    {
+     "false_per_hour": 1.6260162601626018,
+     "missed_percent": 97.45762711864407,
+     "scale": 1.2,
+     "gate": {
+      "cooldown_ms": 1000,
+      "min_ms": 80.0,
+      "max_ms": 300.0,
+      "peak_cap": 1.8,
+      "ibi_ratio": null
+     }
+    },
+    {
+     "false_per_hour": 1.9512195121951221,
+     "missed_percent": 96.1864406779661,
+     "scale": 1.35,
+     "gate": {
+      "cooldown_ms": 1000,
+      "min_ms": 0.0,
+      "max_ms": 300.0,
+      "peak_cap": 1.8,
+      "ibi_ratio": null
+     }
+    },
+    {
+     "false_per_hour": 3.2520325203252036,
+     "missed_percent": 94.77401129943502,
+     "scale": 1.1,
+     "gate": {
+      "cooldown_ms": 1000,
+      "min_ms": 80.0,
+      "max_ms": 300.0,
+      "peak_cap": 1.8,
+      "ibi_ratio": 1.6
+     }
+    },
+    {
+     "false_per_hour": 3.5772357723577235,
+     "missed_percent": 94.2090395480226,
+     "scale": 1.1,
+     "gate": {
+      "cooldown_ms": 1000,
+      "min_ms": 80.0,
+      "max_ms": 300.0,
+      "peak_cap": 1.8,
+      "ibi_ratio": null
+     }
+    },
+    {
+     "false_per_hour": 4.227642276422764,
+     "missed_percent": 89.40677966101694,
+     "scale": 1.2,
+     "gate": {
+      "cooldown_ms": 1000,
+      "min_ms": 0.0,
+      "max_ms": 300.0,
+      "peak_cap": 1.8,
+      "ibi_ratio": 1.6
+     }
+    },
+    {
+     "false_per_hour": 4.5528455284552845,
+     "missed_percent": 87.42937853107344,
+     "scale": 1.0,
+     "gate": {
+      "cooldown_ms": 1000,
+      "min_ms": 80.0,
+      "max_ms": 300.0,
+      "peak_cap": 1.8,
+      "ibi_ratio": 1.6
+     }
+    },
+    {
+     "false_per_hour": 5.528455284552845,
+     "missed_percent": 86.86440677966102,
+     "scale": 1.0,
+     "gate": {
+      "cooldown_ms": 1000,
+      "min_ms": 80.0,
+      "max_ms": 300.0,
+      "peak_cap": 1.8,
+      "ibi_ratio": null
+     }
+    },
+    {
+     "false_per_hour": 8.130081300813007,
+     "missed_percent": 79.51977401129943,
+     "scale": 1.1,
+     "gate": {
+      "cooldown_ms": 3000,
+      "min_ms": 0.0,
+      "max_ms": 300.0,
+      "peak_cap": 1.8,
+      "ibi_ratio": 1.6
+     }
+    },
+    {
+     "false_per_hour": 8.455284552845528,
+     "missed_percent": 79.09604519774011,
+     "scale": 1.1,
+     "gate": {
+      "cooldown_ms": 1000,
+      "min_ms": 0.0,
+      "max_ms": 300.0,
+      "peak_cap": 1.8,
+      "ibi_ratio": 1.6
+     }
+    },
+    {
+     "false_per_hour": 8.780487804878048,
+     "missed_percent": 78.24858757062147,
+     "scale": 1.1,
+     "gate": {
+      "cooldown_ms": 3000,
+      "min_ms": 0.0,
+      "max_ms": 300.0,
+      "peak_cap": 1.8,
+      "ibi_ratio": null
+     }
+    },
+    {
+     "false_per_hour": 9.105691056910569,
+     "missed_percent": 77.82485875706215,
+     "scale": 1.1,
+     "gate": {
+      "cooldown_ms": 1000,
+      "min_ms": 0.0,
+      "max_ms": 300.0,
+      "peak_cap": 1.8,
+      "ibi_ratio": null
+     }
+    },
+    {
+     "false_per_hour": 12.032520325203253,
+     "missed_percent": 73.58757062146893,
+     "scale": 0.9,
+     "gate": {
+      "cooldown_ms": 3000,
+      "min_ms": 80.0,
+      "max_ms": 300.0,
+      "peak_cap": 3.0,
+      "ibi_ratio": 1.6
+     }
+    },
+    {
+     "false_per_hour": 12.682926829268293,
+     "missed_percent": 73.30508474576271,
+     "scale": 0.9,
+     "gate": {
+      "cooldown_ms": 1000,
+      "min_ms": 80.0,
+      "max_ms": 300.0,
+      "peak_cap": 3.0,
+      "ibi_ratio": 1.6
+     }
+    },
+    {
+     "false_per_hour": 13.658536585365853,
+     "missed_percent": 73.0225988700565,
+     "scale": 0.9,
+     "gate": {
+      "cooldown_ms": 1000,
+      "min_ms": 80.0,
+      "max_ms": 300.0,
+      "peak_cap": 3.0,
+      "ibi_ratio": null
+     }
+    },
+    {
+     "false_per_hour": 16.260162601626014,
+     "missed_percent": 62.42937853107344,
+     "scale": 1.0,
+     "gate": {
+      "cooldown_ms": 3000,
+      "min_ms": 0.0,
+      "max_ms": 300.0,
+      "peak_cap": 1.8,
+      "ibi_ratio": 1.6
+     }
+    },
+    {
+     "false_per_hour": 16.910569105691057,
+     "missed_percent": 61.5819209039548,
+     "scale": 1.0,
+     "gate": {
+      "cooldown_ms": 1000,
+      "min_ms": 0.0,
+      "max_ms": 300.0,
+      "peak_cap": 1.8,
+      "ibi_ratio": 1.6
+     }
+    },
+    {
+     "false_per_hour": 17.235772357723576,
+     "missed_percent": 60.73446327683616,
+     "scale": 1.0,
+     "gate": {
+      "cooldown_ms": 3000,
+      "min_ms": 0.0,
+      "max_ms": 300.0,
+      "peak_cap": 1.8,
+      "ibi_ratio": null
+     }
+    },
+    {
+     "false_per_hour": 18.53658536585366,
+     "missed_percent": 59.887005649717516,
+     "scale": 1.0,
+     "gate": {
+      "cooldown_ms": 1000,
+      "min_ms": 0.0,
+      "max_ms": 300.0,
+      "peak_cap": 1.8,
+      "ibi_ratio": null
+     }
+    },
+    {
+     "false_per_hour": 19.51219512195122,
+     "missed_percent": 56.49717514124294,
+     "scale": 0.8,
+     "gate": {
+      "cooldown_ms": 3000,
+      "min_ms": 80.0,
+      "max_ms": 300.0,
+      "peak_cap": 3.0,
+      "ibi_ratio": 1.6
+     }
+    },
+    {
+     "false_per_hour": 20.8130081300813,
+     "missed_percent": 55.367231638418076,
+     "scale": 0.8,
+     "gate": {
+      "cooldown_ms": 3000,
+      "min_ms": 80.0,
+      "max_ms": 500.0,
+      "peak_cap": 3.0,
+      "ibi_ratio": null
+     }
+    },
+    {
+     "false_per_hour": 21.13821138211382,
+     "missed_percent": 55.08474576271186,
+     "scale": 0.8,
+     "gate": {
+      "cooldown_ms": 1000,
+      "min_ms": 80.0,
+      "max_ms": 300.0,
+      "peak_cap": 3.0,
+      "ibi_ratio": 1.6
+     }
+    },
+    {
+     "false_per_hour": 22.4390243902439,
+     "missed_percent": 53.954802259887,
+     "scale": 0.8,
+     "gate": {
+      "cooldown_ms": 1000,
+      "min_ms": 80.0,
+      "max_ms": 500.0,
+      "peak_cap": 3.0,
+      "ibi_ratio": null
+     }
+    },
+    {
+     "false_per_hour": 23.414634146341463,
+     "missed_percent": 45.90395480225989,
+     "scale": 0.9,
+     "gate": {
+      "cooldown_ms": 3000,
+      "min_ms": 0.0,
+      "max_ms": 300.0,
+      "peak_cap": 3.0,
+      "ibi_ratio": 1.6
+     }
+    },
+    {
+     "false_per_hour": 24.715447154471548,
+     "missed_percent": 42.65536723163842,
+     "scale": 0.9,
+     "gate": {
+      "cooldown_ms": 3000,
+      "min_ms": 0.0,
+      "max_ms": 300.0,
+      "peak_cap": 3.0,
+      "ibi_ratio": null
+     }
+    },
+    {
+     "false_per_hour": 26.991869918699187,
+     "missed_percent": 40.96045197740113,
+     "scale": 0.9,
+     "gate": {
+      "cooldown_ms": 1000,
+      "min_ms": 0.0,
+      "max_ms": 300.0,
+      "peak_cap": 3.0,
+      "ibi_ratio": null
+     }
+    },
+    {
+     "false_per_hour": 27.967479674796746,
+     "missed_percent": 36.29943502824859,
+     "scale": 0.7,
+     "gate": {
+      "cooldown_ms": 3000,
+      "min_ms": 80.0,
+      "max_ms": 300.0,
+      "peak_cap": 3.0,
+      "ibi_ratio": 1.6
+     }
+    },
+    {
+     "false_per_hour": 28.617886178861788,
+     "missed_percent": 36.016949152542374,
+     "scale": 0.7,
+     "gate": {
+      "cooldown_ms": 3000,
+      "min_ms": 80.0,
+      "max_ms": 500.0,
+      "peak_cap": 3.0,
+      "ibi_ratio": 1.6
+     }
+    },
+    {
+     "false_per_hour": 28.94308943089431,
+     "missed_percent": 33.89830508474576,
+     "scale": 0.7,
+     "gate": {
+      "cooldown_ms": 3000,
+      "min_ms": 80.0,
+      "max_ms": 300.0,
+      "peak_cap": 3.0,
+      "ibi_ratio": null
+     }
+    },
+    {
+     "false_per_hour": 29.59349593495935,
+     "missed_percent": 33.19209039548023,
+     "scale": 0.7,
+     "gate": {
+      "cooldown_ms": 3000,
+      "min_ms": 80.0,
+      "max_ms": 500.0,
+      "peak_cap": 3.0,
+      "ibi_ratio": null
+     }
+    },
+    {
+     "false_per_hour": 32.19512195121951,
+     "missed_percent": 32.34463276836158,
+     "scale": 0.7,
+     "gate": {
+      "cooldown_ms": 1000,
+      "min_ms": 80.0,
+      "max_ms": 300.0,
+      "peak_cap": 3.0,
+      "ibi_ratio": null
+     }
+    },
+    {
+     "false_per_hour": 32.84552845528455,
+     "missed_percent": 31.63841807909605,
+     "scale": 0.7,
+     "gate": {
+      "cooldown_ms": 1000,
+      "min_ms": 80.0,
+      "max_ms": 500.0,
+      "peak_cap": 3.0,
+      "ibi_ratio": null
+     }
+    },
+    {
+     "false_per_hour": 36.7479674796748,
+     "missed_percent": 29.37853107344633,
+     "scale": 0.8,
+     "gate": {
+      "cooldown_ms": 3000,
+      "min_ms": 0.0,
+      "max_ms": 300.0,
+      "peak_cap": 3.0,
+      "ibi_ratio": 1.6
+     }
+    },
+    {
+     "false_per_hour": 38.3739837398374,
+     "missed_percent": 24.858757062146893,
+     "scale": 0.8,
+     "gate": {
+      "cooldown_ms": 3000,
+      "min_ms": 0.0,
+      "max_ms": 500.0,
+      "peak_cap": 3.0,
+      "ibi_ratio": null
+     }
+    },
+    {
+     "false_per_hour": 41.951219512195124,
+     "missed_percent": 22.88135593220339,
+     "scale": 0.8,
+     "gate": {
+      "cooldown_ms": 1000,
+      "min_ms": 0.0,
+      "max_ms": 500.0,
+      "peak_cap": 3.0,
+      "ibi_ratio": null
+     }
+    },
+    {
+     "false_per_hour": 45.203252032520325,
+     "missed_percent": 21.32768361581921,
+     "scale": 0.6,
+     "gate": {
+      "cooldown_ms": 3000,
+      "min_ms": 80.0,
+      "max_ms": 300.0,
+      "peak_cap": 3.0,
+      "ibi_ratio": null
+     }
+    },
+    {
+     "false_per_hour": 46.5040650406504,
+     "missed_percent": 18.926553672316384,
+     "scale": 0.6,
+     "gate": {
+      "cooldown_ms": 3000,
+      "min_ms": 80.0,
+      "max_ms": 500.0,
+      "peak_cap": 3.0,
+      "ibi_ratio": null
+     }
+    },
+    {
+     "false_per_hour": 51.38211382113821,
+     "missed_percent": 17.231638418079097,
+     "scale": 0.6,
+     "gate": {
+      "cooldown_ms": 1000,
+      "min_ms": 80.0,
+      "max_ms": 500.0,
+      "peak_cap": 3.0,
+      "ibi_ratio": null
+     }
+    },
+    {
+     "false_per_hour": 56.58536585365854,
+     "missed_percent": 15.53672316384181,
+     "scale": 0.7,
+     "gate": {
+      "cooldown_ms": 3000,
+      "min_ms": 0.0,
+      "max_ms": 300.0,
+      "peak_cap": 3.0,
+      "ibi_ratio": null
+     }
+    },
+    {
+     "false_per_hour": 57.235772357723576,
+     "missed_percent": 14.83050847457627,
+     "scale": 0.7,
+     "gate": {
+      "cooldown_ms": 3000,
+      "min_ms": 0.0,
+      "max_ms": 500.0,
+      "peak_cap": 3.0,
+      "ibi_ratio": null
+     }
+    },
+    {
+     "false_per_hour": 63.08943089430894,
+     "missed_percent": 12.429378531073446,
+     "scale": 0.7,
+     "gate": {
+      "cooldown_ms": 1000,
+      "min_ms": 0.0,
+      "max_ms": 300.0,
+      "peak_cap": 3.0,
+      "ibi_ratio": null
+     }
+    },
+    {
+     "false_per_hour": 63.41463414634146,
+     "missed_percent": 11.72316384180791,
+     "scale": 0.7,
+     "gate": {
+      "cooldown_ms": 1000,
+      "min_ms": 0.0,
+      "max_ms": 500.0,
+      "peak_cap": 3.0,
+      "ibi_ratio": null
+     }
+    },
+    {
+     "false_per_hour": 93.33333333333333,
+     "missed_percent": 9.6045197740113,
+     "scale": 0.6,
+     "gate": {
+      "cooldown_ms": 1000,
+      "min_ms": 0.0,
+      "max_ms": 500.0,
+      "peak_cap": 3.0,
+      "ibi_ratio": null
+     }
+    }
+   ]
+  },
+  "firmware_defaults_all_groups": {
+   "false_per_hour": 12.976480129764806,
+   "false_per_hour_ci95": [
+    5.32766463974676,
+    22.911798295124846
+   ],
+   "false_events": 80,
+   "negative_minutes": 123.29999999999995,
+   "stream_minutes": 369.89999999999986,
+   "missed_percent": 58.849557522123895,
+   "missed_percent_ci95": [
+    56.151855374521,
+    61.50447106305772
+   ],
+   "commands": 1356,
+   "missed_percent_by_kind": {
+    "double": 51.051051051051054,
+    "triple": 66.3768115942029
+   },
+   "false_per_hour_by_group": {
+    "1": 0.0,
+    "2": 9.756097560975608,
+    "3": 0.0,
+    "4": 0.0,
+    "5": 0.0,
+    "6": 19.512195121951216,
+    "7": 3.2,
+    "8": 9.756097560975608,
+    "9": 0.0,
+    "10": 19.512195121951216,
+    "11": 0.0,
+    "12": 81.30081300813006,
+    "13": 0.0,
+    "14": 22.76422764227642,
+    "15": 13.008130081300811,
+    "16": 0.0,
+    "17": 45.52845528455284,
+    "18": 35.77235772357723,
+    "19": 0.0,
+    "20": 0.0
+   },
+   "mean_latency_ms": {
+    "double": 705.6411042944785,
+    "triple": 103.69396551724138
+   }
+  },
+  "sim_selected_on_real_test": {
+   "firmware": {
+    "scale": 0.8,
+    "gate": {
+     "cooldown_ms": 0,
+     "min_ms": 0.0,
+     "max_ms": null,
+     "peak_cap": null,
+     "ibi_ratio": null
+    },
+    "test": {
+     "false_per_hour": 54.3089430894309,
+     "false_per_hour_ci95": [
+      13.65040650406504,
+      101.46341463414635
+     ],
+     "false_events": 167,
+     "negative_minutes": 61.5,
+     "stream_minutes": 184.5,
+     "missed_percent": 25.847457627118644,
+     "missed_percent_ci95": [
+      23.249299719887954,
+      28.57142857142857
+     ],
+     "commands": 708,
+     "missed_percent_by_kind": {
+      "double": 21.533923303834808,
+      "triple": 29.81029810298103
+     },
+     "false_per_hour_by_group": {
+      "4": 0.0,
+      "5": 0.0,
+      "6": 55.28455284552845,
+      "8": 9.756097560975608,
+      "9": 16.260162601626014,
+      "11": 3.2520325203252027,
+      "12": 198.37398373983737,
+      "17": 178.86178861788613,
+      "18": 81.30081300813006,
+      "20": 0.0
+     },
+     "mean_latency_ms": {
+      "double": 695.0225563909775,
+      "triple": 90.58687258687259
+     }
+    }
+   },
+   "cooldown": {
+    "scale": 0.8,
+    "gate": {
+     "cooldown_ms": 3000,
+     "min_ms": 0.0,
+     "max_ms": null,
+     "peak_cap": null,
+     "ibi_ratio": null
+    },
+    "test": {
+     "false_per_hour": 39.674796747967484,
+     "false_per_hour_ci95": [
+      10.08130081300813,
+      73.50406504065036
+     ],
+     "false_events": 122,
+     "negative_minutes": 61.5,
+     "stream_minutes": 184.5,
+     "missed_percent": 28.8135593220339,
+     "missed_percent_ci95": [
+      26.148938242743032,
+      31.497175141242938
+     ],
+     "commands": 708,
+     "missed_percent_by_kind": {
+      "double": 26.253687315634217,
+      "triple": 31.16531165311653
+     },
+     "false_per_hour_by_group": {
+      "4": 0.0,
+      "5": 0.0,
+      "6": 29.268292682926827,
+      "8": 9.756097560975608,
+      "9": 13.008130081300811,
+      "11": 3.2520325203252027,
+      "12": 126.8292682926829,
+      "17": 133.33333333333331,
+      "18": 81.30081300813006,
+      "20": 0.0
+     },
+     "mean_latency_ms": {
+      "double": 695.116,
+      "triple": 90.69685039370079
+     }
+    }
+   },
+   "gate": {
+    "scale": 0.7,
+    "gate": {
+     "cooldown_ms": 0,
+     "min_ms": 80.0,
+     "max_ms": 500.0,
+     "peak_cap": 3.0,
+     "ibi_ratio": null
+    },
+    "test": {
+     "false_per_hour": 36.7479674796748,
+     "false_per_hour_ci95": [
+      7.8048780487804885,
+      71.87804878048776
+     ],
+     "false_events": 113,
+     "negative_minutes": 61.5,
+     "stream_minutes": 184.5,
+     "missed_percent": 31.35593220338983,
+     "missed_percent_ci95": [
+      27.536231884057973,
+      35.43417366946779
+     ],
+     "commands": 708,
+     "missed_percent_by_kind": {
+      "double": 27.43362831858407,
+      "triple": 34.959349593495936
+     },
+     "false_per_hour_by_group": {
+      "4": 0.0,
+      "5": 0.0,
+      "6": 29.268292682926827,
+      "8": 9.756097560975608,
+      "9": 9.756097560975608,
+      "11": 6.5040650406504055,
+      "12": 117.07317073170731,
+      "17": 162.60162601626013,
+      "18": 32.52032520325203,
+      "20": 0.0
+     },
+     "mean_latency_ms": {
+      "double": 826.9837398373984,
+      "triple": 229.52916666666667
+     }
+    }
+   },
+   "both": {
+    "scale": 0.7,
+    "gate": {
+     "cooldown_ms": 3000,
+     "min_ms": 80.0,
+     "max_ms": 500.0,
+     "peak_cap": 3.0,
+     "ibi_ratio": null
+    },
+    "test": {
+     "false_per_hour": 29.59349593495935,
+     "false_per_hour_ci95": [
+      7.479674796747967,
+      55.29268292682923
+     ],
+     "false_events": 91,
+     "negative_minutes": 61.5,
+     "stream_minutes": 184.5,
+     "missed_percent": 33.19209039548023,
+     "missed_percent_ci95": [
+      28.800513570250413,
+      37.81512605042017
+     ],
+     "commands": 708,
+     "missed_percent_by_kind": {
+      "double": 30.08849557522124,
+      "triple": 36.043360433604335
+     },
+     "false_per_hour_by_group": {
+      "4": 0.0,
+      "5": 0.0,
+      "6": 26.016260162601622,
+      "8": 9.756097560975608,
+      "9": 9.756097560975608,
+      "11": 6.5040650406504055,
+      "12": 94.30894308943087,
+      "17": 117.07317073170731,
+      "18": 32.52032520325203,
+      "20": 0.0
+     },
+     "mean_latency_ms": {
+      "double": 826.9240506329114,
+      "triple": 229.90254237288136
+     }
+    }
+   }
+  }
+ },
+ "nuisance_sweep_simulator": {
+  "jaw_per_min": {
+   "0.0": {
+    "firmware": {
+     "false_per_hour": 68.25,
+     "missed_percent": 27.559055118110237
+    },
+    "cooldown": {
+     "false_per_hour": 60.75,
+     "missed_percent": 29.527559055118108
+    },
+    "gate": {
+     "false_per_hour": 29.25,
+     "missed_percent": 30.314960629921263
+    },
+    "both": {
+     "false_per_hour": 26.25,
+     "missed_percent": 30.708661417322837
+    }
+   },
+   "0.5": {
+    "firmware": {
+     "false_per_hour": 79.5,
+     "missed_percent": 28.346456692913385
+    },
+    "cooldown": {
+     "false_per_hour": 68.25,
+     "missed_percent": 29.92125984251969
+    },
+    "gate": {
+     "false_per_hour": 36.0,
+     "missed_percent": 32.28346456692913
+    },
+    "both": {
+     "false_per_hour": 32.25,
+     "missed_percent": 32.28346456692913
+    }
+   },
+   "2.0": {
+    "firmware": {
+     "false_per_hour": 132.75,
+     "missed_percent": 30.708661417322837
+    },
+    "cooldown": {
+     "false_per_hour": 105.75,
+     "missed_percent": 35.826771653543304
+    },
+    "gate": {
+     "false_per_hour": 42.75,
+     "missed_percent": 33.07086614173229
+    },
+    "both": {
+     "false_per_hour": 37.5,
+     "missed_percent": 34.25196850393701
+    }
+   },
+   "6.0": {
+    "firmware": {
+     "false_per_hour": 228.75,
+     "missed_percent": 32.677165354330704
+    },
+    "cooldown": {
+     "false_per_hour": 174.75,
+     "missed_percent": 43.7007874015748
+    },
+    "gate": {
+     "false_per_hour": 62.25000000000001,
+     "missed_percent": 33.46456692913386
+    },
+    "both": {
+     "false_per_hour": 54.75,
+     "missed_percent": 36.22047244094488
+    }
+   }
+  },
+  "movement_per_min": {
+   "0.0": {
+    "firmware": {
+     "false_per_hour": 75.75,
+     "missed_percent": 28.346456692913385
+    },
+    "cooldown": {
+     "false_per_hour": 67.5,
+     "missed_percent": 30.314960629921263
+    },
+    "gate": {
+     "false_per_hour": 33.0,
+     "missed_percent": 31.88976377952756
+    },
+    "both": {
+     "false_per_hour": 30.0,
+     "missed_percent": 31.88976377952756
+    }
+   },
+   "1.0": {
+    "firmware": {
+     "false_per_hour": 79.5,
+     "missed_percent": 28.346456692913385
+    },
+    "cooldown": {
+     "false_per_hour": 68.25,
+     "missed_percent": 29.92125984251969
+    },
+    "gate": {
+     "false_per_hour": 36.0,
+     "missed_percent": 32.28346456692913
+    },
+    "both": {
+     "false_per_hour": 32.25,
+     "missed_percent": 32.28346456692913
+    }
+   },
+   "4.0": {
+    "firmware": {
+     "false_per_hour": 104.25,
+     "missed_percent": 29.527559055118108
+    },
+    "cooldown": {
+     "false_per_hour": 90.0,
+     "missed_percent": 33.07086614173229
+    },
+    "gate": {
+     "false_per_hour": 41.25,
+     "missed_percent": 31.88976377952756
+    },
+    "both": {
+     "false_per_hour": 35.25,
+     "missed_percent": 31.88976377952756
+    }
+   },
+   "12.0": {
+    "firmware": {
+     "false_per_hour": 174.0,
+     "missed_percent": 33.46456692913386
+    },
+    "cooldown": {
+     "false_per_hour": 146.25,
+     "missed_percent": 40.94488188976378
+    },
+    "gate": {
+     "false_per_hour": 69.0,
+     "missed_percent": 33.46456692913386
+    },
+    "both": {
+     "false_per_hour": 60.0,
+     "missed_percent": 36.61417322834646
+    }
+   }
+  },
+  "noise_scale": {
+   "0.5": {
+    "firmware": {
+     "false_per_hour": 69.75,
+     "missed_percent": 27.559055118110237
+    },
+    "cooldown": {
+     "false_per_hour": 59.25,
+     "missed_percent": 29.133858267716533
+    },
+    "gate": {
+     "false_per_hour": 28.5,
+     "missed_percent": 28.74015748031496
+    },
+    "both": {
+     "false_per_hour": 25.5,
+     "missed_percent": 28.74015748031496
+    }
+   },
+   "1.0": {
+    "firmware": {
+     "false_per_hour": 79.5,
+     "missed_percent": 28.346456692913385
+    },
+    "cooldown": {
+     "false_per_hour": 68.25,
+     "missed_percent": 29.92125984251969
+    },
+    "gate": {
+     "false_per_hour": 36.0,
+     "missed_percent": 32.28346456692913
+    },
+    "both": {
+     "false_per_hour": 32.25,
+     "missed_percent": 32.28346456692913
+    }
+   },
+   "2.0": {
+    "firmware": {
+     "false_per_hour": 105.0,
+     "missed_percent": 31.496062992125985
+    },
+    "cooldown": {
+     "false_per_hour": 90.0,
+     "missed_percent": 35.039370078740156
+    },
+    "gate": {
+     "false_per_hour": 39.75,
+     "missed_percent": 36.22047244094488
+    },
+    "both": {
+     "false_per_hour": 35.25,
+     "missed_percent": 36.61417322834646
+    }
+   },
+   "3.0": {
+    "firmware": {
+     "false_per_hour": 291.75,
+     "missed_percent": 46.06299212598425
+    },
+    "cooldown": {
+     "false_per_hour": 219.0,
+     "missed_percent": 54.7244094488189
+    },
+    "gate": {
+     "false_per_hour": 112.5,
+     "missed_percent": 36.61417322834646
+    },
+    "both": {
+     "false_per_hour": 93.0,
+     "missed_percent": 40.15748031496063
+    }
+   }
+  },
+  "deliberate_gain": {
+   "1.0": {
+    "firmware": {
+     "false_per_hour": 69.75,
+     "missed_percent": 83.85826771653542
+    },
+    "cooldown": {
+     "false_per_hour": 63.75,
+     "missed_percent": 83.85826771653542
+    },
+    "gate": {
+     "false_per_hour": 30.749999999999996,
+     "missed_percent": 88.9763779527559
+    },
+    "both": {
+     "false_per_hour": 30.0,
+     "missed_percent": 88.9763779527559
+    }
+   },
+   "1.25": {
+    "firmware": {
+     "false_per_hour": 79.5,
+     "missed_percent": 52.362204724409445
+    },
+    "cooldown": {
+     "false_per_hour": 70.5,
+     "missed_percent": 53.937007874015755
+    },
+    "gate": {
+     "false_per_hour": 45.75,
+     "missed_percent": 65.74803149606299
+    },
+    "both": {
+     "false_per_hour": 43.5,
+     "missed_percent": 65.74803149606299
+    }
+   },
+   "1.5": {
+    "firmware": {
+     "false_per_hour": 79.5,
+     "missed_percent": 28.346456692913385
+    },
+    "cooldown": {
+     "false_per_hour": 68.25,
+     "missed_percent": 29.92125984251969
+    },
+    "gate": {
+     "false_per_hour": 36.0,
+     "missed_percent": 32.28346456692913
+    },
+    "both": {
+     "false_per_hour": 32.25,
+     "missed_percent": 32.28346456692913
+    }
+   },
+   "2.0": {
+    "firmware": {
+     "false_per_hour": 144.0,
+     "missed_percent": 48.4251968503937
+    },
+    "cooldown": {
+     "false_per_hour": 127.5,
+     "missed_percent": 50.39370078740157
+    },
+    "gate": {
+     "false_per_hour": 22.5,
+     "missed_percent": 11.023622047244094
+    },
+    "both": {
+     "false_per_hour": 18.75,
+     "missed_percent": 11.811023622047244
+    }
+   }
+  },
+  "no_artifacts": {
+   "firmware": {
+    "false_per_hour": 54.75,
+    "missed_percent": 27.559055118110237
+   },
+   "cooldown": {
+    "false_per_hour": 50.25,
+    "missed_percent": 27.95275590551181
+   },
+   "gate": {
+    "false_per_hour": 28.5,
+    "missed_percent": 30.708661417322837
+   },
+   "both": {
+    "false_per_hour": 25.5,
+    "missed_percent": 30.708661417322837
+   }
+  }
+ },
+ "double_fire_diagnostic": {
+  "isolated_blink_fires_by_envelope_peak": {
+   "30.0": 0,
+   "45.0": 1,
+   "67.0": 1,
+   "90.0": 2,
+   "135.0": 2
+  },
+  "scale_simulator": 0.8,
+  "scale_real": 0.8,
+  "refire_fraction_simulator_test_all_excursions": 0.04674457429048414,
+  "refire_fraction_real_test_natural_only": 0.013361838588989846
+ }
+}

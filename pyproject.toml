@@ -1,0 +1,42 @@
+[build-system]
+requires = ["hatchling>=1.18"]
+build-backend = "hatchling.build"
+
+[project]
+name = "quiet-blink"
+version = "0.1.0"
+description = "Accidental activation versus missed commands for a blink-gesture interface"
+readme = "README.md"
+requires-python = ">=3.10"
+license = { text = "MIT" }
+authors = [{ name = "Montek Kundan" }]
+dependencies = [
+    "numpy>=1.26",
+    "scipy>=1.11",
+    "matplotlib>=3.8",
+    "pyedflib>=0.1.36",
+]
+
+[project.optional-dependencies]
+dev = ["pytest>=8.0", "ruff>=0.5"]
+
+[project.scripts]
+quietblink = "quietblink.cli:main"
+
+[tool.hatch.build.targets.wheel]
+packages = ["src/quietblink"]
+
+[tool.pytest.ini_options]
+testpaths = ["tests"]
+pythonpath = ["src"]
+
+[tool.ruff]
+line-length = 100
+target-version = "py310"
+src = ["src", "tests"]
+
+[tool.ruff.lint]
+select = ["E", "F", "I", "B", "UP", "SIM", "RUF", "N"]
+
+[tool.ruff.lint.flake8-bugbear]
+extend-immutable-calls = ["quietblink.detector.Params", "quietblink.gates.Gate"]

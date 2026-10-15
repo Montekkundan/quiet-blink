@@ -8,7 +8,7 @@ hour against missed commands. This repo ports the firmware's blink path to Pytho
 both sides, and tests two additions.
 
 ## Method
-- **Port** (`detector.py`) of `control.ino` v0.2.0: notch 48-52 Hz, 45 Hz low-pass, 5 Hz
+- **Port** (`detector.py`) of [MindClick's `control/control.ino` v0.2.0](https://github.com/Montekkundan/mindclick/blob/e834b92775d8bbc23440e5ee184a7941329c0750/control/control.ino): notch 48-52 Hz, 45 Hz low-pass, 5 Hz
   high-pass, |x| with 100 ms moving average, in-band test (40, 55), 200 ms debounce, 600 ms
   double/triple windows, `blinkCount` machine. Filters are designed per sample rate (equal to
   the firmware biquads at 512 Hz, tested); deviations are in the module docstring.
@@ -67,12 +67,82 @@ real data: 695 ms (double) / 91 ms (triple), 806 / 207 ms with the gate.
 ![false activations](results/figures/false_activations.png)
 
 ## Quickstart
+
+No EEG device is needed. This runs on saved public recordings and injected blink templates.
+Use Python 3.10 or newer:
+
+```sh
+git clone https://github.com/Montekkundan/quiet-blink.git
+cd quiet-blink
+python3 -m venv .venv
+source .venv/bin/activate
+python -m pip install -e '.[dev]'
 ```
-pip install -e ".[dev]"
-quietblink --data /path/to/eegbci --out results   # S001R06.edf ... S020R14.edf
-pytest -q && ruff check . && ruff format --check .
+
+Download the [PhysioNet EEG Motor Movement/Imagery Dataset, version 1.0.0](https://physionet.org/content/eegmmidb/1.0.0/).
+This study uses **60 EDF files**: subjects 1 through 20, runs 06, 10 and 14. Store them
+flat in one folder, for example `data/eegbci/S001R06.edf`, rather than nested subject folders.
+The following downloader uses Python's standard library and skips existing files:
+
+```sh
+python - <<'PY'
+from pathlib import Path
+from urllib.request import urlretrieve
+
+folder = Path('data/eegbci')
+folder.mkdir(parents=True, exist_ok=True)
+base = 'https://physionet.org/files/eegmmidb/1.0.0'
+for subject in range(1, 21):
+    for run in (6, 10, 14):
+        name = f'S{subject:03d}R{run:02d}.edf'
+        destination = folder / name
+        if not destination.exists():
+            temporary = destination.with_suffix('.edf.part')
+            urlretrieve(f'{base}/S{subject:03d}/{name}', temporary)
+            temporary.replace(destination)
+        print(destination)
+PY
 ```
-Fixed seeds, CPU only, about 45 CPU-s; reruns reproduce `results/metrics.json` (timing aside).
+
+Run the study and its tests:
+
+```sh
+OMP_NUM_THREADS=1 quietblink --data data/eegbci --out demo-results
+pytest -q
+ruff check .
+ruff format --check .
+```
+
+The command writes `demo-results/metrics.json` and four PNG figures. Point `--data` at an
+existing flat EDF folder to reuse a download. Keep `--out` separate from `results/` to
+preserve the archived study. Fixed seeds, CPU only; runtime varies by machine. The archived
+run used about 45 CPU-seconds. Raw EDF files are excluded from Git.
+
+### Reading the main table
+
+The four variants are separate runs: the ported firmware rule, that rule plus a one-second
+cooldown, the shape gate without a cooldown, and both checks together. All four main-table
+settings use a calibrated threshold scale of 0.8, or 32/44 units; they are not the unadjusted
+40/55 defaults. The selected shape gate treats one excursion as one blink, rejects durations
+above 300 ms and peaks above 1.8 times the upper threshold. The optional triple-spacing
+check is not active at these selected settings.
+
+**54.3 FA/h is a rate, not 54.3% accuracy.** It means 167 unwanted outputs over 184.5
+recording-channel minutes. Both checks produced 129 outputs over the same duration, or
+42.0 FA/h: 38 fewer outputs, a 22.8% relative reduction. A channel-hour is one recording
+channel observed for an hour; three simultaneous channels are not three hours of a person's
+use.
+
+Missed commands are measured separately on copies with 708 injected command patterns.
+The baseline missed 183 (25.8%); both checks missed 181 (25.6%). A hit must have the correct
+double/triple kind and occur within 1.5 seconds after the last injected blink. This is
+roughly the same miss rate, not a 29-percentage-point improvement or an overall accuracy
+score. Background outputs cannot be subtracted from a missed-command percentage.
+
+Square brackets give 95% bootstrap confidence intervals, resampling whole people. The
+combined reduction is 23% with an interval of 15% to 31%; this describes uncertainty from
+the sample, not a success percentage or a guarantee for each person. The shape-only
+reduction interval crosses zero, so its standalone benefit remains uncertain here.
 
 ## Limitations
 - The missed side rests on simulator assumptions: deliberate amplitude 1.5x natural, 25%
